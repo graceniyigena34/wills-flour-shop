@@ -68,7 +68,7 @@ function ContactPage() {
               icon: MessageCircle,
               label: "WhatsApp",
               value: "Message us anytime",
-              href: "https://wa.me/+250785704109",
+              href: "https://wa.me/+250788476680",
             },
             {
               icon: Mail,
