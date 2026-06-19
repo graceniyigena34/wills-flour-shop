@@ -5,7 +5,6 @@ import peeling from "@/assets/peeling.jpeg";
 import drying from "@/assets/drying.jpeg";
 import grinding from "@/assets/grinding.jpeg";
 import packagingProcess from "@/assets/packaging process.jpeg";
-import team from "@/assets/Team.jpeg";
 import people from "@/assets/people.jpeg";
 import bowl from "@/assets/flour-bowl.jpeg";
 import pastries from "@/assets/pastries.jpeg";
@@ -37,7 +36,6 @@ const images = [
   { src: drying, alt: "Drying", span: "md:col-span-2" },
   { src: grinding, alt: "Grinding" },
   { src: packagingProcess, alt: "Packaging process" },
-  { src: team, alt: "Our team", span: "md:col-span-2" },
   { src: people, alt: "Team members" },
   { src: pastries, alt: "Baked pastries", span: "md:col-span-2" },
   { src: family, alt: "Family kitchen" },
