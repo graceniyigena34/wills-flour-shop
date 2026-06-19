@@ -29,17 +29,17 @@ export const Route = createFileRoute("/gallery")({
 });
 
 const images = [
-  { src: field, alt: "Cassava fields", span: "md:col-span-2 md:row-span-2" },
+  { src: field, alt: "Cassava fields" },
   { src: farmer, alt: "Harvesting" },
   { src: peeling, alt: "Peeling" },
   { src: bowl, alt: "Flour bowl" },
-  { src: drying, alt: "Drying", span: "md:col-span-2" },
+  { src: drying, alt: "Drying" },
   { src: grinding, alt: "Grinding" },
   { src: packagingProcess, alt: "Packaging process" },
   { src: people, alt: "Team members" },
-  { src: pastries, alt: "Baked pastries", span: "md:col-span-2" },
+  { src: pastries, alt: "Baked pastries" },
   { src: family, alt: "Family kitchen" },
-  { src: hero, alt: "Cassava flour", span: "md:col-span-2" },
+  { src: hero, alt: "Cassava flour" },
   { src: willsLogo, alt: "Will's Cassava Flour brand logo" },
 ];
 
