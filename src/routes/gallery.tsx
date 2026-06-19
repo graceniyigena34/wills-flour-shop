@@ -1,16 +1,17 @@
 import { createFileRoute } from "@tanstack/react-router";
-import hero from "@/assets/hero-flour.jpg";
-import bowl from "@/assets/flour-bowl.jpeg";
 import field from "@/assets/cassava-field.jpeg";
-import family from "@/assets/family-kitchen.jpeg";
-import packages from "@/assets/hero-flour.jpeg";
-import willsLogo from "@/assets/Logo.jpeg";
 import farmer from "@/assets/farmer.jpeg";
 import peeling from "@/assets/peeling.jpeg";
 import drying from "@/assets/drying.jpeg";
 import grinding from "@/assets/grinding.jpeg";
-import team from "@/assets/team-packaging.jpeg";
+import packagingProcess from "@/assets/packaging process.jpeg";
+import team from "@/assets/Team.jpeg";
+import people from "@/assets/people.jpeg";
+import bowl from "@/assets/flour-bowl.jpeg";
 import pastries from "@/assets/pastries.jpeg";
+import family from "@/assets/family-kitchen.jpeg";
+import hero from "@/assets/hero-flour.jpeg";
+import willsLogo from "@/assets/Logo.jpeg";
 
 export const Route = createFileRoute("/gallery")({
   head: () => ({
@@ -29,17 +30,18 @@ export const Route = createFileRoute("/gallery")({
 });
 
 const images = [
-  { src: hero, alt: "Product packaging", span: "md:col-span-2 md:row-span-2" },
-  { src: field, alt: "Cassava fields" },
+  { src: field, alt: "Cassava fields", span: "md:col-span-2 md:row-span-2" },
   { src: farmer, alt: "Harvesting" },
   { src: peeling, alt: "Peeling" },
-  { src: drying, alt: "Drying" },
-  { src: grinding, alt: "Grinding", span: "md:col-span-2" },
-  { src: team, alt: "Packaging team" },
+  { src: drying, alt: "Drying", span: "md:col-span-2" },
+  { src: grinding, alt: "Grinding" },
+  { src: packagingProcess, alt: "Packaging process" },
+  { src: team, alt: "Our team", span: "md:col-span-2" },
+  { src: people, alt: "Team members" },
   { src: bowl, alt: "Flour bowl" },
-  { src: packages, alt: "Packages", span: "md:col-span-2" },
-  { src: pastries, alt: "Baked pastries" },
-  { src: family, alt: "Family kitchen", span: "md:col-span-2" },
+  { src: pastries, alt: "Baked pastries", span: "md:col-span-2" },
+  { src: family, alt: "Family kitchen" },
+  { src: hero, alt: "Cassava flour", span: "md:col-span-2" },
   { src: willsLogo, alt: "Will's Cassava Flour brand logo" },
 ];
 
