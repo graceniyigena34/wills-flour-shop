@@ -15,10 +15,10 @@ import bowl from "@/assets/flour-bowl.jpeg";
 import field from "@/assets/cassava-field.jpeg";
 import family from "@/assets/family-kitchen.jpeg";
 import farmer from "@/assets/farmer.jpeg";
-import peeling from "@/assets/peeling.jpg";
+import peeling from "@/assets/peeling.jpeg";
 import drying from "@/assets/drying.jpeg";
 import grinding from "@/assets/grinding.jpeg";
-import team from "@/assets/team-packaging.jpg";
+import team from "@/assets/team-packaging.jpeg";
 import pastries from "@/assets/pastries.jpeg";
 
 export const Route = createFileRoute("/")({

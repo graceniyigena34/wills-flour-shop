@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Target, Eye, CheckCircle2 } from "lucide-react";
 import farmer from "@/assets/farmer.jpeg";
-import team from "@/assets/team-packaging.jpg";
+import team from "@/assets/team-packaging.jpeg";
 import people from "@/assets/people.jpeg";
 import family from "@/assets/family-kitchen.jpeg";
 

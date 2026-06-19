@@ -1,10 +1,10 @@
 import { createFileRoute } from "@tanstack/react-router";
 import farmer from "@/assets/farmer.jpeg";
-import peeling from "@/assets/peeling.jpg";
+import peeling from "@/assets/peeling.jpeg";
 import bowl from "@/assets/flour-bowl.jpeg";
 import drying from "@/assets/drying.jpeg";
 import grinding from "@/assets/grinding.jpeg";
-import team from "@/assets/team-packaging.jpg";
+import team from "@/assets/team-packaging.jpeg";
 
 export const Route = createFileRoute("/process")({
   head: () => ({
