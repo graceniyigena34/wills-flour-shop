@@ -373,7 +373,7 @@ function HomePage() {
       {/* GALLERY PREVIEW */}
       <section className="container-x pb-20 md:pb-28">
         <div className="grid gap-3 md:grid-cols-4">
-          {[family, field, team, pastries].map((src, i) => (
+          {[field, farmer, packaging, pastries].map((src, i) => (
             <img
               key={i}
               src={src}
