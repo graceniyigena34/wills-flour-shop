@@ -1,0 +1,116 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-cassava: var(--cassava);
+  --color-cassava-deep: var(--cassava-deep);
+  --color-leaf: var(--leaf);
+  --color-leaf-soft: var(--leaf-soft);
+  --color-cream: var(--cream);
+  --color-bark: var(--bark);
+
+  --font-serif: "Fraunces", Georgia, serif;
+  --font-sans: "Inter", system-ui, sans-serif;
+}
+
+:root {
+  --radius: 0.75rem;
+
+  /* Warm earthy palette */
+  --background: oklch(0.985 0.008 85);          /* warm white */
+  --foreground: oklch(0.27 0.04 50);            /* deep bark */
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.27 0.04 50);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.27 0.04 50);
+
+  --primary: oklch(0.42 0.09 50);               /* rich bark brown */
+  --primary-foreground: oklch(0.985 0.008 85);
+  --secondary: oklch(0.92 0.04 80);             /* cassava beige */
+  --secondary-foreground: oklch(0.32 0.05 50);
+  --muted: oklch(0.95 0.02 85);
+  --muted-foreground: oklch(0.45 0.03 60);
+  --accent: oklch(0.62 0.11 140);               /* soft leaf green */
+  --accent-foreground: oklch(0.99 0.005 90);
+
+  --destructive: oklch(0.55 0.2 27);
+  --destructive-foreground: oklch(0.99 0 0);
+  --border: oklch(0.88 0.02 80);
+  --input: oklch(0.9 0.02 80);
+  --ring: oklch(0.62 0.11 140);
+
+  --cassava: oklch(0.88 0.06 80);               /* warm flour beige */
+  --cassava-deep: oklch(0.74 0.09 70);          /* toasted */
+  --leaf: oklch(0.58 0.12 140);                 /* fresh leaf */
+  --leaf-soft: oklch(0.88 0.05 140);            /* mist green */
+  --cream: oklch(0.975 0.012 85);
+  --bark: oklch(0.32 0.05 50);
+
+  --sidebar: oklch(0.985 0.008 85);
+  --sidebar-foreground: oklch(0.27 0.04 50);
+  --sidebar-primary: oklch(0.42 0.09 50);
+  --sidebar-primary-foreground: oklch(0.985 0.008 85);
+  --sidebar-accent: oklch(0.92 0.04 80);
+  --sidebar-accent-foreground: oklch(0.32 0.05 50);
+  --sidebar-border: oklch(0.88 0.02 80);
+  --sidebar-ring: oklch(0.62 0.11 140);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    font-feature-settings: "ss01", "cv11";
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, h3, h4 {
+    font-family: var(--font-serif);
+    font-weight: 500;
+    letter-spacing: -0.02em;
+    color: var(--color-primary);
+  }
+}
+
+@utility container-x {
+  @apply mx-auto w-full max-w-6xl px-6 md:px-10;
+}
+
+@utility eyebrow {
+  @apply inline-flex items-center gap-2 text-xs font-medium uppercase tracking-[0.22em] text-accent;
+}
