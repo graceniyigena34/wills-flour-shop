@@ -197,13 +197,20 @@ function HomePage() {
               A small mill with a <span className="italic text-accent">big mission</span>.
             </h2>
             <p className="mt-5 text-muted-foreground">
-              Will&rsquo;s Cassava Flour was born from a simple idea — that families deserve flour
-              they can trust. We partner closely with African farmers who handcraft every batch with
-              care,never compromising on quality
+              Will&rsquo;s Cassava Flour was born from a simple idea: families deserve flour they
+              can trust. We work closely with African cassava farmers and cooperatives, ensuring
+              every batch is produced with care, quality, and sustainability at its heart.
+            </p>
+            <p className="mt-3 text-muted-foreground">
+              Beyond producing premium cassava flour, we are committed to creating opportunities for
+              women in agriculture. We proudly partner with women farmers and women-led cooperatives,
+              providing reliable markets for their cassava and helping strengthen livelihoods across
+              rural communities.
             </p>
             <p className="mt-3 text-muted-foreground">
               Our mission is to bring healthy, natural, and premium cassava flour to kitchens and
-              bakeries across Africa and beyond.
+              bakeries across Africa and beyond, while empowering African women farmers through
+              inclusive and sustainable agricultural partnerships.
             </p>
             <Link
               to="/about"
