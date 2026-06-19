@@ -19,6 +19,7 @@ import peeling from "@/assets/peeling.jpeg";
 import drying from "@/assets/drying.jpeg";
 import grinding from "@/assets/grinding.jpeg";
 import team from "@/assets/team-packaging.jpeg";
+import packaging from "@/assets/packaging process.jpeg";
 import pastries from "@/assets/pastries.jpeg";
 
 export const Route = createFileRoute("/")({
@@ -104,7 +105,7 @@ const steps = [
   {
     n: "06",
     title: "Packaging",
-    img: team,
+    img: packaging,
     text: "Sealed in food-safe bags for freshness from our mill to your kitchen.",
   },
 ];
