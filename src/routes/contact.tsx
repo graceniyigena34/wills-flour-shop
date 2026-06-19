@@ -63,12 +63,12 @@ function ContactPage() {
         {/* CONTACT INFO */}
         <div className="space-y-5">
           {[
-            { icon: Phone, label: "Call", value: "+250793017746", href: "tel:+250793017746" },
+            { icon: Phone, label: "Call", value: "+250 785 704 109", href: "tel:+250785704109" },
             {
               icon: MessageCircle,
               label: "WhatsApp",
               value: "Message us anytime",
-              href: "https://wa.me/+250793017746",
+              href: "https://wa.me/+250785704109",
             },
             {
               icon: Mail,

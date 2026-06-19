@@ -13,12 +13,10 @@ import {
 import hero from "@/assets/hero-flour.jpeg";
 import bowl from "@/assets/flour-bowl.jpeg";
 import field from "@/assets/cassava-field.jpeg";
-import family from "@/assets/family-kitchen.jpeg";
 import farmer from "@/assets/farmer.jpeg";
 import peeling from "@/assets/peeling.jpeg";
 import drying from "@/assets/drying.jpeg";
 import grinding from "@/assets/grinding.jpeg";
-import team from "@/assets/team-packaging.jpeg";
 import packaging from "@/assets/packaging process.jpeg";
 import pastries from "@/assets/pastries.jpeg";
 
@@ -379,7 +377,7 @@ function HomePage() {
               src={src}
               alt=""
               loading="lazy"
-              className={`w-full rounded-2xl object-cover ${i % 2 ? "aspect-[3/4]" : "aspect-square"}`}
+              className="aspect-square w-full rounded-2xl object-cover"
             />
           ))}
         </div>
@@ -400,7 +398,7 @@ function HomePage() {
               Order Today <ArrowRight className="h-4 w-4" />
             </Link>
             <a
-              href={`https://wa.me/250793017746?text=${encodeURIComponent(
+              href={`https://wa.me/+250785704109?text=${encodeURIComponent(
                 "Hello Will's Cassava Flour! 👋 I'd like to place an order for cassava flour. Could you share the available pack sizes and prices?",
               )}`}
               target="_blank"

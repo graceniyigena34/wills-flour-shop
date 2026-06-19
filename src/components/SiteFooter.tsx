@@ -69,7 +69,7 @@ export function SiteFooter() {
             </li>
             <li className="flex items-start gap-2">
               <Phone className="mt-0.5 h-4 w-4 text-leaf" />
-              <span>Call +250793017746</span>
+              <span>Call +250 785 704 109</span>
             </li>
             <li className="flex items-start gap-2">
               <Mail className="mt-0.5 h-4 w-4 text-leaf" />

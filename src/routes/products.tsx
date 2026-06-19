@@ -92,7 +92,7 @@ function ProductsPage() {
                 ))}
               </ul>
               <a
-                href={`https://wa.me/250793017746?text=${encodeURIComponent(
+                href={`https://wa.me/+250785704109?text=${encodeURIComponent(
                   `Hello Will's Cassava Flour! 👋 I'd like to order the ${p.size} ${p.title} of cassava flour. Is it available?`,
                 )}`}
                 target="_blank"
