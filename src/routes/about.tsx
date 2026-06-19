@@ -82,6 +82,24 @@ function AboutPage() {
               ))}
             </ul>
           </div>
+          <div>
+            <span className="grid h-11 w-11 place-items-center rounded-xl bg-leaf-soft text-leaf">
+              <CheckCircle2 className="h-5 w-5" />
+            </span>
+            <h2 className="mt-4 text-3xl">Our Impact</h2>
+            <ul className="mt-3 space-y-2 text-muted-foreground">
+              {[
+                "Supporting women cassava farmers and cooperatives",
+                "Creating sustainable income opportunities in rural communities",
+                "Promoting quality agricultural practices",
+                "Building a stronger and more inclusive cassava value chain across Africa",
+              ].map((o) => (
+                <li key={o} className="flex gap-2">
+                  <CheckCircle2 className="mt-1 h-4 w-4 shrink-0 text-leaf" /> {o}
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </section>
 
