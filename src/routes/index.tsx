@@ -61,7 +61,7 @@ const features = [
   {
     icon: MapPin,
     title: "Locally Produced",
-    text: "Grown and milled in Rwanda, supporting local farmers and communities.",
+    text: "Grown and milled in Africa, supporting local farmers and communities.",
   },
   {
     icon: ShieldCheck,
