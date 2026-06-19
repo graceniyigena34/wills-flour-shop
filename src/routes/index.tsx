@@ -19,7 +19,7 @@ import peeling from "@/assets/peeling.jpg";
 import drying from "@/assets/drying.jpeg";
 import grinding from "@/assets/grinding.jpg";
 import team from "@/assets/team-packaging.jpg";
-import pastries from "@/assets/pastries.jpg";
+import pastries from "@/assets/pastries.jpeg";
 
 export const Route = createFileRoute("/")({
   head: () => ({

@@ -37,7 +37,7 @@ function ContactPage() {
         "service_q28g22j",
         "template_zys1zyh",
         formRef.current!,
-        "d6KnoByefpz96fBzl"
+        "d6KnoByefpz96fBzl",
       );
       setSent(true);
     } catch {
@@ -121,7 +121,13 @@ function ContactPage() {
               <input name="from_name" required className="input" placeholder="Your full name" />
             </Field>
             <Field label="Email">
-              <input name="from_email" required type="email" className="input" placeholder="you@example.com" />
+              <input
+                name="from_email"
+                required
+                type="email"
+                className="input"
+                placeholder="you@example.com"
+              />
             </Field>
             <Field label="Phone">
               <input name="phone" className="input" placeholder="+250 ..." />
@@ -152,8 +158,14 @@ function ContactPage() {
             disabled={sending || sent}
             className="mt-6 inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-medium text-primary-foreground hover:bg-bark disabled:opacity-60"
           >
-            {sent ? "Message sent ✓" : sending ? "Sending…" : (
-              <>Send message <Send className="h-4 w-4" /></>
+            {sent ? (
+              "Message sent ✓"
+            ) : sending ? (
+              "Sending…"
+            ) : (
+              <>
+                Send message <Send className="h-4 w-4" />
+              </>
             )}
           </button>
 

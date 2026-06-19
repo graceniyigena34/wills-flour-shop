@@ -16,16 +16,27 @@ export function FeedbackWidget() {
   const [error, setError] = useState<string | null>(null);
 
   function reset() {
-    setRating(0); setHover(0); setName(""); setEmail(""); setPhone("");
-    setMessage(""); setFollowup(true); setStatus("idle"); setError(null);
+    setRating(0);
+    setHover(0);
+    setName("");
+    setEmail("");
+    setPhone("");
+    setMessage("");
+    setFollowup(true);
+    setStatus("idle");
+    setError(null);
   }
 
   function submit(e: React.FormEvent) {
     e.preventDefault();
     setError(null);
-    if (rating < 1) { setError("Please select a star rating."); return; }
+    if (rating < 1) {
+      setError("Please select a star rating.");
+      return;
+    }
     if (!name.trim() || !email.trim() || !message.trim()) {
-      setError("Name, email, and message are required."); return;
+      setError("Name, email, and message are required.");
+      return;
     }
     setStatus("sending");
     const subject = `Website feedback — ${rating}★ from ${name.trim()}`;
@@ -37,11 +48,15 @@ export function FeedbackWidget() {
       `Okay to follow up: ${followup ? "Yes" : "No"}`,
       "",
       message.trim(),
-    ].filter(Boolean).join("\n");
-    window.location.href =
-      `mailto:${FEEDBACK_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    ]
+      .filter(Boolean)
+      .join("\n");
+    window.location.href = `mailto:${FEEDBACK_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     setStatus("sent");
-    setTimeout(() => { setOpen(false); reset(); }, 1800);
+    setTimeout(() => {
+      setOpen(false);
+      reset();
+    }, 1800);
   }
 
   return (
@@ -83,18 +98,25 @@ export function FeedbackWidget() {
                 </div>
                 <h3 className="mt-4 font-serif text-2xl text-primary">Thank you!</h3>
                 <p className="mt-2 text-sm text-muted-foreground">
-                  Your feedback has been received. We&rsquo;ll reach out if we need any clarification.
+                  Your feedback has been received. We&rsquo;ll reach out if we need any
+                  clarification.
                 </p>
               </div>
             ) : (
               <form onSubmit={submit}>
-                <span className="text-xs font-medium uppercase tracking-widest text-accent">Your feedback</span>
+                <span className="text-xs font-medium uppercase tracking-widest text-accent">
+                  Your feedback
+                </span>
                 <h3 className="mt-1 font-serif text-2xl text-primary">How was our flour?</h3>
                 <p className="mt-1 text-sm text-muted-foreground">
                   Shared privately with our team — never published.
                 </p>
 
-                <div className="mt-5 flex items-center gap-1.5" role="radiogroup" aria-label="Star rating">
+                <div
+                  className="mt-5 flex items-center gap-1.5"
+                  role="radiogroup"
+                  aria-label="Star rating"
+                >
                   {[1, 2, 3, 4, 5].map((n) => {
                     const active = (hover || rating) >= n;
                     return (
@@ -118,13 +140,39 @@ export function FeedbackWidget() {
                 </div>
 
                 <div className="mt-5 grid gap-3">
-                  <Input label="Name" value={name} onChange={setName} placeholder="Your full name" required maxLength={120} />
-                  <Input label="Email" type="email" value={email} onChange={setEmail} placeholder="you@example.com" required maxLength={255} />
-                  <Input label="Phone (optional)" value={phone} onChange={setPhone} placeholder="+250 ..." maxLength={40} />
+                  <Input
+                    label="Name"
+                    value={name}
+                    onChange={setName}
+                    placeholder="Your full name"
+                    required
+                    maxLength={120}
+                  />
+                  <Input
+                    label="Email"
+                    type="email"
+                    value={email}
+                    onChange={setEmail}
+                    placeholder="you@example.com"
+                    required
+                    maxLength={255}
+                  />
+                  <Input
+                    label="Phone (optional)"
+                    value={phone}
+                    onChange={setPhone}
+                    placeholder="+250 ..."
+                    maxLength={40}
+                  />
                   <label className="block">
-                    <span className="text-xs font-medium uppercase tracking-wider text-muted-foreground">Message</span>
+                    <span className="text-xs font-medium uppercase tracking-wider text-muted-foreground">
+                      Message
+                    </span>
                     <textarea
-                      required rows={3} maxLength={2000} value={message}
+                      required
+                      rows={3}
+                      maxLength={2000}
+                      value={message}
                       onChange={(e) => setMessage(e.target.value)}
                       placeholder="Tell us what you loved or what could be better..."
                       className="mt-1.5 w-full resize-none rounded-xl border border-border bg-background px-3 py-2 text-sm outline-none focus:border-accent"
@@ -148,7 +196,13 @@ export function FeedbackWidget() {
                   disabled={status === "sending"}
                   className="mt-5 inline-flex w-full items-center justify-center gap-2 rounded-full bg-primary px-5 py-3 text-sm font-medium text-primary-foreground transition-colors hover:bg-bark disabled:opacity-60"
                 >
-                  {status === "sending" ? "Sending..." : <>Send feedback <Send className="h-4 w-4" /></>}
+                  {status === "sending" ? (
+                    "Sending..."
+                  ) : (
+                    <>
+                      Send feedback <Send className="h-4 w-4" />
+                    </>
+                  )}
                 </button>
               </form>
             )}
@@ -160,7 +214,13 @@ export function FeedbackWidget() {
 }
 
 function Input({
-  label, value, onChange, type = "text", placeholder, required, maxLength,
+  label,
+  value,
+  onChange,
+  type = "text",
+  placeholder,
+  required,
+  maxLength,
 }: {
   label: string;
   value: string;
@@ -172,7 +232,9 @@ function Input({
 }) {
   return (
     <label className="block">
-      <span className="text-xs font-medium uppercase tracking-wider text-muted-foreground">{label}</span>
+      <span className="text-xs font-medium uppercase tracking-wider text-muted-foreground">
+        {label}
+      </span>
       <input
         type={type}
         value={value}

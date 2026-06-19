@@ -18,7 +18,11 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-40 border-b border-border/60 bg-background/80 backdrop-blur-md">
       <div className="container-x flex h-16 items-center justify-between">
-        <Link to="/" className="flex items-center text-primary" aria-label="Will's Cassava Flour — home">
+        <Link
+          to="/"
+          className="flex items-center text-primary"
+          aria-label="Will's Cassava Flour — home"
+        >
           <img src={logo} alt="Will's Cassava Flour" className="h-12 w-auto object-contain" />
         </Link>
         <nav className="hidden items-center gap-7 md:flex">

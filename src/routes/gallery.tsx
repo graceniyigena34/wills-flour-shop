@@ -10,13 +10,17 @@ import peeling from "@/assets/peeling.jpg";
 import drying from "@/assets/drying.jpeg";
 import grinding from "@/assets/grinding.jpg";
 import team from "@/assets/team-packaging.jpg";
-import pastries from "@/assets/pastries.jpg";
+import pastries from "@/assets/pastries.jpeg";
 
 export const Route = createFileRoute("/gallery")({
   head: () => ({
     meta: [
       { title: "Gallery — Will's Cassava Flour" },
-      { name: "description", content: "Production photos, team moments, farms and customer kitchens — a visual story of Will's Cassava Flour." },
+      {
+        name: "description",
+        content:
+          "Production photos, team moments, farms and customer kitchens — a visual story of Will's Cassava Flour.",
+      },
       { property: "og:title", content: "Gallery" },
       { property: "og:description", content: "Inside the world of Will's Cassava Flour." },
     ],
@@ -44,7 +48,9 @@ function GalleryPage() {
     <div>
       <section className="container-x py-20 md:py-28">
         <span className="eyebrow">Gallery</span>
-        <h1 className="mt-4 max-w-3xl text-5xl md:text-7xl">A look <span className="italic text-accent">inside</span> our world.</h1>
+        <h1 className="mt-4 max-w-3xl text-5xl md:text-7xl">
+          A look <span className="italic text-accent">inside</span> our world.
+        </h1>
         <p className="mt-6 max-w-2xl text-lg text-muted-foreground">
           Farms, faces, kitchens and craft — the moments that shape every bag we make.
         </p>
@@ -54,7 +60,12 @@ function GalleryPage() {
         <div className="grid auto-rows-[200px] grid-cols-2 gap-3 md:grid-cols-4 md:auto-rows-[220px]">
           {images.map((img, i) => (
             <div key={i} className={`overflow-hidden rounded-2xl ${img.span ?? ""}`}>
-              <img src={img.src} alt={img.alt} loading="lazy" className="h-full w-full object-cover transition-transform duration-700 hover:scale-105" />
+              <img
+                src={img.src}
+                alt={img.alt}
+                loading="lazy"
+                className="h-full w-full object-cover transition-transform duration-700 hover:scale-105"
+              />
             </div>
           ))}
         </div>

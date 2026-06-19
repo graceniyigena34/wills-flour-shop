@@ -46,20 +46,20 @@
   --radius: 0.75rem;
 
   /* Warm earthy palette */
-  --background: oklch(0.985 0.008 85);          /* warm white */
-  --foreground: oklch(0.27 0.04 50);            /* deep bark */
+  --background: oklch(0.985 0.008 85); /* warm white */
+  --foreground: oklch(0.27 0.04 50); /* deep bark */
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.27 0.04 50);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.27 0.04 50);
 
-  --primary: oklch(0.42 0.09 50);               /* rich bark brown */
+  --primary: oklch(0.42 0.09 50); /* rich bark brown */
   --primary-foreground: oklch(0.985 0.008 85);
-  --secondary: oklch(0.92 0.04 80);             /* cassava beige */
+  --secondary: oklch(0.92 0.04 80); /* cassava beige */
   --secondary-foreground: oklch(0.32 0.05 50);
   --muted: oklch(0.95 0.02 85);
   --muted-foreground: oklch(0.45 0.03 60);
-  --accent: oklch(0.62 0.11 140);               /* soft leaf green */
+  --accent: oklch(0.62 0.11 140); /* soft leaf green */
   --accent-foreground: oklch(0.99 0.005 90);
 
   --destructive: oklch(0.55 0.2 27);
@@ -68,10 +68,10 @@
   --input: oklch(0.9 0.02 80);
   --ring: oklch(0.62 0.11 140);
 
-  --cassava: oklch(0.88 0.06 80);               /* warm flour beige */
-  --cassava-deep: oklch(0.74 0.09 70);          /* toasted */
-  --leaf: oklch(0.58 0.12 140);                 /* fresh leaf */
-  --leaf-soft: oklch(0.88 0.05 140);            /* mist green */
+  --cassava: oklch(0.88 0.06 80); /* warm flour beige */
+  --cassava-deep: oklch(0.74 0.09 70); /* toasted */
+  --leaf: oklch(0.58 0.12 140); /* fresh leaf */
+  --leaf-soft: oklch(0.88 0.05 140); /* mist green */
   --cream: oklch(0.975 0.012 85);
   --bark: oklch(0.32 0.05 50);
 
@@ -99,7 +99,10 @@
     font-feature-settings: "ss01", "cv11";
     -webkit-font-smoothing: antialiased;
   }
-  h1, h2, h3, h4 {
+  h1,
+  h2,
+  h3,
+  h4 {
     font-family: var(--font-serif);
     font-weight: 500;
     letter-spacing: -0.02em;

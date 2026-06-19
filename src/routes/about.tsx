@@ -72,7 +72,7 @@ function AboutPage() {
             <ul className="mt-3 space-y-2 text-muted-foreground">
               {[
                 "Promote healthy living through natural foods",
-                "Support local Rwandan farmers with fair pay",
+                "Support African local farmers especially women with fair pay",
                 "Deliver consistent, quality products to every customer",
                 "Build a sustainable model for African agriculture",
               ].map((o) => (
