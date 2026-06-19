@@ -1,8 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Target, Eye, CheckCircle2 } from "lucide-react";
 import farmer from "@/assets/farmer.jpeg";
-import team from "@/assets/team-packaging.jpeg";
-import people from "@/assets/people.jpeg";
+import teamPhoto from "@/assets/Team.jpeg";
 import family from "@/assets/family-kitchen.jpeg";
 
 export const Route = createFileRoute("/about")({
@@ -112,13 +111,7 @@ function AboutPage() {
             hygiene isn&rsquo;t optional, it&rsquo;s our promise.
           </p>
           <img
-            src={team}
-            alt="Our production team in clean uniforms"
-            loading="lazy"
-            className="mt-10 aspect-[16/8] w-full rounded-3xl object-cover"
-          />
-          <img
-            src={people}
+            src={teamPhoto}
             alt="Will's Cassava Flour team"
             loading="lazy"
             className="mt-6 aspect-[4/3] w-full rounded-3xl object-cover"
