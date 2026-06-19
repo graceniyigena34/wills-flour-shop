@@ -4,7 +4,7 @@ import peeling from "@/assets/peeling.jpeg";
 import bowl from "@/assets/flour-bowl.jpeg";
 import drying from "@/assets/drying.jpeg";
 import grinding from "@/assets/grinding.jpeg";
-import team from "@/assets/team-packaging.jpeg";
+import packaging from "@/assets/packaging process.jpeg";
 
 export const Route = createFileRoute("/process")({
   head: () => ({
@@ -59,7 +59,7 @@ const steps = [
   {
     n: "06",
     title: "Packaging",
-    img: team,
+    img: packaging,
     text: "Flour is sealed in food-safe kraft bags inside a clean, hygienic facility. Each bag is sealed, labelled, and ready for your kitchen.",
   },
 ];
