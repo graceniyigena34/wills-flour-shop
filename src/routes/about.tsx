@@ -114,7 +114,7 @@ function AboutPage() {
             src={teamPhoto}
             alt="Will's Cassava Flour team"
             loading="lazy"
-            className="mt-6 aspect-[4/3] w-full rounded-3xl object-cover"
+            className="mt-6 w-full rounded-3xl object-contain"
           />
         </div>
       </section>
