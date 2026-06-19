@@ -3,7 +3,7 @@ import { Target, Eye, CheckCircle2 } from "lucide-react";
 import farmer from "@/assets/farmer.jpeg";
 import team from "@/assets/team-packaging.jpg";
 import people from "@/assets/people.jpeg";
-import family from "@/assets/family-kitchen.jpg";
+import family from "@/assets/family-kitchen.jpeg";
 
 export const Route = createFileRoute("/about")({
   head: () => ({

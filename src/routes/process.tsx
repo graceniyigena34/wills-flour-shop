@@ -3,7 +3,7 @@ import farmer from "@/assets/farmer.jpeg";
 import peeling from "@/assets/peeling.jpg";
 import bowl from "@/assets/flour-bowl.jpeg";
 import drying from "@/assets/drying.jpeg";
-import grinding from "@/assets/grinding.jpg";
+import grinding from "@/assets/grinding.jpeg";
 import team from "@/assets/team-packaging.jpg";
 
 export const Route = createFileRoute("/process")({

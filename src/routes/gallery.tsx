@@ -2,13 +2,13 @@ import { createFileRoute } from "@tanstack/react-router";
 import hero from "@/assets/hero-flour.jpg";
 import bowl from "@/assets/flour-bowl.jpeg";
 import field from "@/assets/cassava-field.jpeg";
-import family from "@/assets/family-kitchen.jpg";
+import family from "@/assets/family-kitchen.jpeg";
 import packages from "@/assets/hero-flour.jpeg";
 import willsLogo from "@/assets/Logo.jpeg";
 import farmer from "@/assets/farmer.jpeg";
 import peeling from "@/assets/peeling.jpg";
 import drying from "@/assets/drying.jpeg";
-import grinding from "@/assets/grinding.jpg";
+import grinding from "@/assets/grinding.jpeg";
 import team from "@/assets/team-packaging.jpg";
 import pastries from "@/assets/pastries.jpeg";
 
