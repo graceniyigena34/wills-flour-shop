@@ -23,7 +23,7 @@ import pastries from "@/assets/pastries.jpeg";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Will's Cassava Flour — Pure. Natural. Healthy." },
+      { title: "Will's Cassava Flour Pure Natural Healthy" },
       {
         name: "description",
         content:
@@ -40,22 +40,22 @@ const features = [
   {
     icon: Leaf,
     title: "Gluten Free",
-    text: "Naturally free of gluten — gentle on digestion and friendly for every diet.",
+    text: "Naturally free of gluten gentle on digestion and friendly for every diet",
   },
   {
     icon: Sparkles,
     title: "100% Natural",
-    text: "No additives. No bleaching. Just the goodness of the cassava root.",
+    text: "No additives, No bleaching and Just the goodness of the cassava root",
   },
   {
     icon: HeartHandshake,
     title: "Rich in Nutrients",
-    text: "A wholesome source of carbohydrates, fibre and resistant starch.",
+    text: "A wholesome source of carbohydrates, fibre and resistant starch",
   },
   {
     icon: FlaskConical,
     title: "No Chemicals",
-    text: "Processed using clean water and traditional methods — never harsh chemicals.",
+    text: "Processed using clean water and traditional methods never harsh chemicals.",
   },
   {
     icon: MapPin,
@@ -124,7 +124,7 @@ function HomePage() {
               <span className="italic text-accent">Healthy</span> cassava flour.
             </h1>
             <p className="mt-6 max-w-md text-lg text-muted-foreground">
-              100% Chemical-Free Cassava Flour — Bringing the Natural Goodness of African Cassava to
+              100% Chemical Free Cassava Flour. Bringing the Natural Goodness of African Cassava to
               Every Kitchen.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
@@ -227,7 +227,7 @@ function HomePage() {
           <div className="flex flex-wrap items-end justify-between gap-4">
             <div>
               <span className="eyebrow">Featured</span>
-              <h2 className="mt-3 text-4xl md:text-5xl">Crafted for every kitchen.</h2>
+              <h2 className="mt-3 text-4xl md:text-5xl">Crafted for every kitchen</h2>
             </div>
             <Link to="/products" className="text-sm font-medium text-accent hover:underline">
               View all products →
@@ -388,7 +388,7 @@ function HomePage() {
         <div className="overflow-hidden rounded-[2.5rem] bg-primary px-8 py-16 text-center text-primary-foreground md:px-16 md:py-24">
           <p className="text-sm uppercase tracking-[0.25em] text-cassava">Order today</p>
           <h2 className="mx-auto mt-4 max-w-2xl text-balance text-4xl text-primary-foreground md:text-6xl">
-            Healthy flour for <span className="italic text-cassava">healthy families.</span>
+            Healthy flour for <span className="italic text-cassava">healthy families</span>
           </h2>
           <div className="mt-8 flex flex-wrap justify-center gap-3">
             <Link
