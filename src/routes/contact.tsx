@@ -63,7 +63,7 @@ function ContactPage() {
         {/* CONTACT INFO */}
         <div className="space-y-5">
           {[
-            { icon: Phone, label: "Call", value: "+250 785 704 109", href: "tel:+250785704109" },
+            { icon: Phone, label: "Call", value: "+250 788 476 680", href: "tel:+250788476680" },
             {
               icon: MessageCircle,
               label: "WhatsApp",
@@ -73,8 +73,8 @@ function ContactPage() {
             {
               icon: Mail,
               label: "Email",
-              value: "hello@willscassava.com",
-              href: "mailto:hello@willscassava.com",
+              value: "info@willscassavaflour.rw",
+              href: "mailto:info@willscassavaflour.rw",
             },
             { icon: MapPin, label: "Visit", value: "Kigali, Rwanda" },
           ].map((c) => (
