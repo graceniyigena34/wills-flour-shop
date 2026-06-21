@@ -49,17 +49,17 @@ function GalleryPage() {
       <section className="container-x py-20 md:py-28">
         <span className="eyebrow">Gallery</span>
         <h1 className="mt-4 max-w-3xl text-5xl md:text-7xl">
-          A look <span className="italic text-accent">inside</span> our world.
+          A look <span className="italic text-accent">inside</span> our world
         </h1>
         <p className="mt-6 max-w-2xl text-lg text-muted-foreground">
-          Farms, faces, kitchens and craft — the moments that shape every bag we make.
+          Farms, faces, kitchens and craft the moments that shape every bag we make.
         </p>
       </section>
 
       <section className="container-x pb-24">
         <div className="grid auto-rows-[200px] grid-cols-2 gap-3 md:grid-cols-4 md:auto-rows-[220px]">
           {images.map((img, i) => (
-            <div key={i} className={`overflow-hidden rounded-2xl ${img.span ?? ""}`}>
+            <div key={i} className="overflow-hidden rounded-2xl">
               <img
                 src={img.src}
                 alt={img.alt}
