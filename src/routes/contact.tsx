@@ -52,10 +52,11 @@ function ContactPage() {
       <section className="container-x py-20 md:py-28">
         <span className="eyebrow">Contact</span>
         <h1 className="mt-4 max-w-3xl text-5xl md:text-7xl">
-          Let&rsquo;s <span className="italic text-accent">talk flour</span>.
+          Let&rsquo;s <span className="italic text-accent">talk flour</span>
         </h1>
         <p className="mt-6 max-w-2xl text-lg text-muted-foreground">
-          Questions, orders, partnerships — we&rsquo;d love to hear from you.
+          Questions, orders, partnerships 
+           we&rsquo;d love to hear from you.
         </p>
       </section>
 
