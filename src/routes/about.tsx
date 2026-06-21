@@ -26,10 +26,10 @@ function AboutPage() {
         <span className="eyebrow">Our story</span>
         <h1 className="mt-4 max-w-3xl text-5xl md:text-7xl">
           A family idea grown into{" "}
-          <span className="italic text-accent">Rwanda&rsquo;s healthiest flour</span>.
+          <span className="italic text-accent">Rwanda&rsquo;s healthiest flour</span>
         </h1>
         <p className="mt-6 max-w-2xl text-lg text-muted-foreground">
-          Will&rsquo;s Cassava Flour started in a small Rwandan kitchen — a search for flour that
+          Will&rsquo;s Cassava Flour started in a small Rwandan kitchen. A search for flour that
           was clean, honest and naturally good. Today, that same standard guides every batch we
           mill.
         </p>
@@ -50,7 +50,7 @@ function AboutPage() {
             <h2 className="mt-4 text-3xl">Our mission</h2>
             <p className="mt-3 text-muted-foreground">
               To provide healthy, natural, and high-quality cassava flour to families and businesses
-              — every single day.
+              every single day.
             </p>
           </div>
           <div>
@@ -105,9 +105,9 @@ function AboutPage() {
       <section className="bg-secondary/40 py-20 md:py-28">
         <div className="container-x">
           <span className="eyebrow">Our team</span>
-          <h2 className="mt-3 text-4xl md:text-5xl">The hands behind every bag.</h2>
+          <h2 className="mt-3 text-4xl md:text-5xl">The hands behind every bag</h2>
           <p className="mt-4 max-w-2xl text-muted-foreground">
-            Every member of our team wears proper uniforms, hairnets, gloves and boots — because
+            Every member of our team wears proper uniforms, hairnets, gloves and boots because
             hygiene isn&rsquo;t optional, it&rsquo;s our promise.
           </p>
           <img
@@ -121,7 +121,7 @@ function AboutPage() {
 
       <section className="container-x py-20 md:py-28">
         <span className="eyebrow">Why quality matters to us</span>
-        <h2 className="mt-3 text-4xl md:text-5xl">Stories from our community.</h2>
+        <h2 className="mt-3 text-4xl md:text-5xl">Stories from our community</h2>
         <div className="mt-12 grid gap-6 md:grid-cols-3">
           {[
             {
@@ -131,7 +131,7 @@ function AboutPage() {
             },
             {
               title: "The Miller",
-              text: "&ldquo;I see each batch from peel to package. Cleanliness isn&rsquo;t a step — it&rsquo;s how I work every day.&rdquo;",
+              text: "&ldquo;I see each batch from peel to package. Cleanliness isn&rsquo;t a step it&rsquo;s how I work every day.&rdquo;",
               role: "Claudine, Production Lead",
             },
             {
