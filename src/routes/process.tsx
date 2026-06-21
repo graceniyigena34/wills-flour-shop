@@ -18,7 +18,7 @@ export const Route = createFileRoute("/process")({
       { property: "og:title", content: "Our Process" },
       {
         property: "og:description",
-        content: "How Will's Cassava Flour is made — naturally, step by step.",
+        content: "How Will's Cassava Flour is made naturally, step by step.",
       },
     ],
   }),
@@ -30,7 +30,7 @@ const steps = [
     n: "01",
     title: "Harvesting",
     img: farmer,
-    text: "Mature cassava roots are hand-pulled from rich African soil. only when they’ve reached peak starch content. We work with smallholder farmers who share our commitment to quality",
+    text: "Mature cassava roots are hand pulled from rich African soil only when they’ve reached peak starch content. We work with smallholder farmers who share our commitment to quality",
   },
   {
     n: "02",
@@ -42,7 +42,7 @@ const steps = [
     n: "03",
     title: "Soaking",
     img: bowl,
-    text: "Peeled cassava is submerged in clean spring water to gently draw out natural compounds — the traditional way to ensure a safe, mild flour.",
+    text: "Peeled cassava is submerged in clean spring water to gently draw out natural compounds. The traditional way to ensure a safe, mild flour.",
   },
   {
     n: "04",
@@ -60,7 +60,7 @@ const steps = [
     n: "06",
     title: "Packaging",
     img: packaging,
-    text: "Flour is sealed in food-safe kraft bags inside a clean, hygienic facility. Each bag is sealed, labelled, and ready for your kitchen.",
+    text: "Flour is sealed in food safe kraft bags inside a clean, hygienic facility. Each bag is sealed, labelled, and ready for your kitchen.",
   },
 ];
 
@@ -70,7 +70,7 @@ function ProcessPage() {
       <section className="container-x py-20 md:py-28">
         <span className="eyebrow">How it&rsquo;s made</span>
         <h1 className="mt-4 max-w-3xl text-5xl md:text-7xl">
-          Six honest steps from <span className="italic text-accent">root to flour</span>.
+          Six honest steps from <span className="italic text-accent">root to flour</span>
         </h1>
         <p className="mt-6 max-w-2xl text-lg text-muted-foreground">
           No shortcuts. No chemicals. Just time-tested craft, careful hygiene, and a deep respect
