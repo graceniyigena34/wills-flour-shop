@@ -27,10 +27,10 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Premium chemical-free cassava flour from Rwanda. Gluten-free, nutrient-rich, and hygienically processed for families and businesses.",
+          "Premium chemical free cassava flour from Rwanda. Gluten-free, nutrient-rich, and hygienically processed for families and businesses.",
       },
       { property: "og:title", content: "Will's Cassava Flour" },
-      { property: "og:description", content: "Pure. Natural. Healthy Cassava Flour from Rwanda." },
+      { property: "og:description", content: "Pure Natural Healthy Cassava Flour from Rwanda" },
     ],
   }),
   component: HomePage,
@@ -193,7 +193,7 @@ function HomePage() {
           <div>
             <span className="eyebrow">Who we are</span>
             <h2 className="mt-4 text-4xl md:text-5xl">
-              A small mill with a <span className="italic text-accent">big mission</span>.
+              A small mill with a <span className="italic text-accent">big mission</span>
             </h2>
             <p className="mt-5 text-muted-foreground">
               Will&rsquo;s Cassava Flour was born from a simple idea: families deserve flour they
@@ -276,7 +276,7 @@ function HomePage() {
         <div className="mx-auto max-w-2xl text-center">
           <span className="eyebrow">Why choose us</span>
           <h2 className="mt-3 text-4xl md:text-5xl">
-            Six reasons families <span className="italic text-accent">trust</span> us.
+            Six reasons families <span className="italic text-accent">trust</span> us
           </h2>
         </div>
         <div className="mt-12 grid gap-6 md:grid-cols-3">
@@ -302,8 +302,8 @@ function HomePage() {
             <div className="max-w-xl">
               <span className="eyebrow">Our process</span>
               <h2 className="mt-3 text-4xl md:text-5xl">
-                From root to flour — in <span className="italic text-accent">six honest steps</span>
-                .
+                From root to flour in <span className="italic text-accent">six honest steps</span>
+                
               </h2>
             </div>
             <Link to="/process" className="text-sm font-medium text-accent hover:underline">
@@ -339,16 +339,16 @@ function HomePage() {
       <section className="container-x py-20 md:py-28">
         <div className="mx-auto max-w-2xl text-center">
           <span className="eyebrow">Voices we love</span>
-          <h2 className="mt-3 text-4xl md:text-5xl">What our customers say.</h2>
+          <h2 className="mt-3 text-4xl md:text-5xl">What our customers say</h2>
         </div>
         <div className="mt-12 grid gap-6 md:grid-cols-3">
           {[
             {
-              q: "The texture is incredible — my bread turns out soft every time.",
+              q: "The texture is incredible my bread turns out soft every time.",
               a: "Aline, Kigali",
             },
             {
-              q: "Finally a gluten-free flour my whole family enjoys without compromise.",
+              q: "Finally a gluten free flour my whole family enjoys without compromise.",
               a: "Joseph, Musanze",
             },
             {
