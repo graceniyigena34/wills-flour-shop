@@ -37,81 +37,29 @@ export const Route = createFileRoute("/")({
   component: HomePage,
 });
 
-const features = [
-  {
-    icon: Leaf,
-    title: "Gluten Free",
-    text: "Naturally free of gluten gentle on digestion and friendly for every diet",
-  },
-  {
-    icon: Sparkles,
-    title: "100% Natural",
-    text: "No additives, No bleaching and Just the goodness of the cassava root",
-  },
-  {
-    icon: HeartHandshake,
-    title: "Rich in Nutrients",
-    text: "A wholesome source of carbohydrates, fibre and resistant starch",
-  },
-  {
-    icon: FlaskConical,
-    title: "No Chemicals",
-    text: "Processed using clean water and traditional methods never harsh chemicals.",
-  },
-  {
-    icon: MapPin,
-    title: "Locally Produced",
-    text: "Grown and milled in Africa, supporting local farmers and communities.",
-  },
-  {
-    icon: ShieldCheck,
-    title: "Hygienically Processed",
-    text: "Every batch passes through a clean, food-safe production line.",
-  },
-];
-
-const steps = [
-  {
-    n: "01",
-    title: "Harvesting",
-    img: farmer,
-    text: "Mature cassava roots are hand-harvested from trusted farms.",
-  },
-  {
-    n: "02",
-    title: "Peeling",
-    img: peeling,
-    text: "Roots are carefully peeled to keep only the pure white flesh.",
-  },
-  {
-    n: "03",
-    title: "Soaking",
-    img: bowl,
-    text: "Soaked in clean water to remove natural compounds and impurities.",
-  },
-  {
-    n: "04",
-    title: "Drying",
-    img: drying,
-    text: "Sun-dried on raised racks until perfectly crisp and ready.",
-  },
-  {
-    n: "05",
-    title: "Grinding",
-    img: grinding,
-    text: "Stone-milled into the soft, silky flour our customers love.",
-  },
-  {
-    n: "06",
-    title: "Packaging",
-    img: packaging,
-    text: "Sealed in food-safe bags for freshness from our mill to your kitchen.",
-  },
-];
 
 function HomePage() {
   const { t } = useLanguage();
   const h = t.home;
+
+  const features = [
+    { icon: Leaf, title: h.feat1Title, text: h.feat1Text },
+    { icon: Sparkles, title: h.feat2Title, text: h.feat2Text },
+    { icon: HeartHandshake, title: h.feat3Title, text: h.feat3Text },
+    { icon: FlaskConical, title: h.feat4Title, text: h.feat4Text },
+    { icon: MapPin, title: h.feat5Title, text: h.feat5Text },
+    { icon: ShieldCheck, title: h.feat6Title, text: h.feat6Text },
+  ];
+
+  const steps = [
+    { n: "01", title: h.step1Title, img: farmer, text: h.step1Text },
+    { n: "02", title: h.step2Title, img: peeling, text: h.step2Text },
+    { n: "03", title: h.step3Title, img: bowl, text: h.step3Text },
+    { n: "04", title: h.step4Title, img: drying, text: h.step4Text },
+    { n: "05", title: h.step5Title, img: grinding, text: h.step5Text },
+    { n: "06", title: h.step6Title, img: packaging, text: h.step6Text },
+  ];
+
   return (
     <div>
       {/* HERO */}
@@ -175,22 +123,9 @@ function HomePage() {
             <h2 className="mt-4 text-4xl md:text-5xl">
               {h.missionTitle} <span className="italic text-accent">{h.missionItalic}</span>
             </h2>
-            <p className="mt-5 text-muted-foreground">
-              Will&rsquo;s Cassava Flour was born from a simple idea: families deserve flour they
-              can trust. We work closely with African cassava farmers and cooperatives, ensuring
-              every batch is produced with care, quality, and sustainability at its heart.
-            </p>
-            <p className="mt-3 text-muted-foreground">
-              Beyond producing premium cassava flour, we are committed to creating opportunities for
-              women in agriculture. We proudly partner with women farmers and women-led cooperatives,
-              providing reliable markets for their cassava and helping strengthen livelihoods across
-              rural communities.
-            </p>
-            <p className="mt-3 text-muted-foreground">
-              Our mission is to bring healthy, natural, and premium cassava flour to kitchens and
-              bakeries across Africa and beyond, while empowering African women farmers through
-              inclusive and sustainable agricultural partnerships.
-            </p>
+            <p className="mt-5 text-muted-foreground">{h.storyP1}</p>
+            <p className="mt-3 text-muted-foreground">{h.storyP2}</p>
+            <p className="mt-3 text-muted-foreground">{h.storyP3}</p>
             <Link
               to="/about"
               className="mt-6 inline-flex items-center gap-2 text-sm font-medium text-accent hover:gap-3 transition-all"
@@ -215,21 +150,9 @@ function HomePage() {
           </div>
           <div className="mt-10 grid gap-6 md:grid-cols-3">
             {[
-              {
-                img: bowl,
-                title: "Pure White Flour",
-                text: "Silky, fine-milled and ready to bake.",
-              },
-              {
-                img: hero,
-                title: "Family Packaging",
-                text: "Premium 2kg kraft packs — pure cassava flour.",
-              },
-              {
-                img: pastries,
-                title: "Endless Recipes",
-                text: "From ugali to pastries, breads and beyond.",
-              },
+              { img: bowl,     title: h.prod1Title, text: h.prod1Text },
+              { img: hero,     title: h.prod2Title, text: h.prod2Text },
+              { img: pastries, title: h.prod3Title, text: h.prod3Text },
             ].map((c) => (
               <div
                 key={c.title}
@@ -303,7 +226,7 @@ function HomePage() {
                 />
                 <div className="p-5">
                   <p className="text-xs font-medium uppercase tracking-widest text-accent">
-                    Step {s.n}
+                    {h.stepLabel} {s.n}
                   </p>
                   <h3 className="mt-1 text-lg">{s.title}</h3>
                   <p className="mt-2 text-sm text-muted-foreground">{s.text}</p>
@@ -322,26 +245,14 @@ function HomePage() {
         </div>
         <div className="mt-12 grid gap-6 md:grid-cols-3">
           {[
-            {
-              q: "The texture is incredible my bread turns out soft every time.",
-              a: "Aline, Kigali",
-            },
-            {
-              q: "Finally a gluten free flour my whole family enjoys without compromise.",
-              a: "Joseph, Musanze",
-            },
-            {
-              q: "We&rsquo;ve switched our entire bakery to Will&rsquo;s. The quality is unmatched.",
-              a: "Chef Marie, Nyamirambo",
-            },
-          ].map((t, i) => (
+            { q: h.test1Q, a: h.test1A },
+            { q: h.test2Q, a: h.test2A },
+            { q: h.test3Q, a: h.test3A },
+          ].map((testimonial, i) => (
             <figure key={i} className="rounded-3xl border border-border bg-background p-7">
               <Quote className="h-6 w-6 text-leaf" />
-              <blockquote
-                className="mt-3 text-foreground"
-                dangerouslySetInnerHTML={{ __html: `&ldquo;${t.q}&rdquo;` }}
-              />
-              <figcaption className="mt-4 text-sm text-muted-foreground">— {t.a}</figcaption>
+              <blockquote className="mt-3 text-foreground">&ldquo;{testimonial.q}&rdquo;</blockquote>
+              <figcaption className="mt-4 text-sm text-muted-foreground">— {testimonial.a}</figcaption>
             </figure>
           ))}
         </div>
