@@ -127,26 +127,6 @@ function HomePage() {
               100% Chemical Free Cassava Flour. Bringing the Natural Goodness of African Cassava to
               Every Kitchen.
             </p>
-            <div className="mt-8 flex flex-wrap gap-3">
-              <Link
-                to="/products"
-                className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-medium text-primary-foreground transition-colors hover:bg-bark"
-              >
-                Shop Now <ArrowRight className="h-4 w-4" />
-              </Link>
-              <Link
-                to="/about"
-                className="inline-flex items-center rounded-full border border-primary/20 bg-background px-6 py-3 text-sm font-medium text-primary hover:border-primary/40"
-              >
-                Learn More
-              </Link>
-              <Link
-                to="/contact"
-                className="inline-flex items-center rounded-full bg-leaf-soft px-6 py-3 text-sm font-medium text-primary hover:bg-leaf/20"
-              >
-                Contact Us
-              </Link>
-            </div>
             <div className="mt-10 grid max-w-md grid-cols-3 gap-6 border-t border-border pt-6 text-sm">
               <div>
                 <p className="font-serif text-2xl text-primary">100%</p>
