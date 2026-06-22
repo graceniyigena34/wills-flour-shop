@@ -51,7 +51,7 @@ function ProductsPage() {
       <section className="container-x py-20 md:py-28">
         <span className="eyebrow">Products</span>
         <h1 className="mt-4 max-w-3xl text-5xl md:text-7xl">
-          A size for <span className="italic text-accent">every kitchen</span>.
+          A size for <span className="italic text-accent">every kitchen</span>
         </h1>
         <p className="mt-6 max-w-2xl text-lg text-muted-foreground">
           Whether you bake weekly at home or run a busy bakery, we&rsquo;ve got the right pack of
