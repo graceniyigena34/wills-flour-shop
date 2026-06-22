@@ -19,7 +19,7 @@ export const T = {
     home: {
       eyebrow: "Rwanda • Est.2025",
       h1a: "Pure Natural", h1b: "Healthy", h1c: "cassava flour",
-      sub: "100% Chemical-Free Cassava Flour — Bringing the Natural Goodness of African Cassava to Every Kitchen.",
+      sub: "100% Chemical-Free Cassava Flour. Bringing the Natural Goodness of African Cassava to Every Kitchen.",
       stat1: "Chemical free", stat2: "Pure process", stat3: "For every need",
       lovedBy: "Loved by",
       ourStory: "Our Story",
