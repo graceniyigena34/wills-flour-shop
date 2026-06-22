@@ -13,6 +13,7 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { FeedbackWidget } from "@/components/FeedbackWidget";
 import { LanguageProvider } from "@/lib/i18n";
+import { ThemeProvider, themeScript } from "@/lib/theme";
 
 function NotFoundComponent() {
   return (
@@ -129,6 +130,7 @@ function RootShell({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
       <head>
+        <script dangerouslySetInnerHTML={{ __html: themeScript }} />
         <HeadContent />
       </head>
       <body>
@@ -143,6 +145,7 @@ function RootComponent() {
   const { queryClient } = Route.useRouteContext();
   return (
     <QueryClientProvider client={queryClient}>
+      <ThemeProvider>
       <LanguageProvider>
         <div className="flex min-h-screen flex-col">
           <SiteHeader />
@@ -153,6 +156,7 @@ function RootComponent() {
           <FeedbackWidget />
         </div>
       </LanguageProvider>
+      </ThemeProvider>
     </QueryClientProvider>
   );
 }

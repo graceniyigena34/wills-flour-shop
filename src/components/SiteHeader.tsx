@@ -1,8 +1,9 @@
 import { Link } from "@tanstack/react-router";
 import { useState, useRef, useEffect } from "react";
-import { Menu, X, Globe } from "lucide-react";
+import { Menu, X, Globe, Sun, Moon } from "lucide-react";
 import logo from "@/assets/Logo.jpeg";
 import { useLanguage, Lang } from "@/lib/i18n";
+import { useTheme } from "@/lib/theme";
 
 const languages: { code: Lang; label: string; full: string }[] = [
   { code: "en", label: "EN", full: "English" },
@@ -65,6 +66,21 @@ function LangDropdown() {
   );
 }
 
+function ThemeToggle() {
+  const { theme, toggleTheme } = useTheme();
+  return (
+    <button
+      onClick={toggleTheme}
+      aria-label="Toggle dark mode"
+      className="flex items-center justify-center rounded-full p-2 transition-colors hover:bg-leaf-soft"
+    >
+      {theme === "dark"
+        ? <Sun className="h-5 w-5 text-primary" />
+        : <Moon className="h-5 w-5 text-primary" />}
+    </button>
+  );
+}
+
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
   const { t, lang, setLang } = useLanguage();
@@ -93,6 +109,7 @@ export function SiteHeader() {
           ))}
         </nav>
         <div className="hidden items-center gap-3 md:flex">
+          <ThemeToggle />
           <LangDropdown />
           <Link
             to="/products"
@@ -124,7 +141,7 @@ export function SiteHeader() {
                 {t.nav[n.key]}
               </Link>
             ))}
-            <div className="mt-3 flex gap-2 border-t border-border/60 pt-3">
+            <div className="mt-3 flex items-center gap-2 border-t border-border/60 pt-3">
               {languages.map((l) => (
                 <button
                   key={l.code}
@@ -138,6 +155,7 @@ export function SiteHeader() {
                   {l.full}
                 </button>
               ))}
+              <ThemeToggle />
             </div>
           </div>
         </div>
