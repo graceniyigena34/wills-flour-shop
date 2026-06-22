@@ -119,7 +119,7 @@ function HomePage() {
               <span className="h-px w-8 bg-accent" /> Rwanda • Est.2025{" "}
             </span>
             <h1 className="mt-5 text-balance text-5xl leading-[1.05] md:text-7xl">
-              Pure. Natural.
+              Pure Natural
               <br />
               <span className="italic text-accent">Healthy</span> cassava flour
             </h1>
