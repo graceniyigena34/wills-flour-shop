@@ -28,7 +28,7 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Premium chemical free cassava flour from Rwanda. Gluten-free, nutrient-rich, and hygienically processed for families and businesses.",
+          "Premium chemical free cassava flour from Rwanda. Gluten free, nutrient rich, and hygienically processed for families and businesses.",
       },
       { property: "og:title", content: "Will's Cassava Flour" },
       { property: "og:description", content: "Pure Natural Healthy Cassava Flour from Rwanda" },
