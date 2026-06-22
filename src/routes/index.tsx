@@ -121,7 +121,7 @@ function HomePage() {
             <h1 className="mt-5 text-balance text-5xl leading-[1.05] md:text-7xl">
               Pure. Natural.
               <br />
-              <span className="italic text-accent">Healthy</span> cassava flour.
+              <span className="italic text-accent">Healthy</span> cassava flour
             </h1>
             <p className="mt-6 max-w-md text-lg text-muted-foreground">
               100% Chemical Free Cassava Flour. Bringing the Natural Goodness of African Cassava to
