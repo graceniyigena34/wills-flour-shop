@@ -171,7 +171,7 @@ function HomePage() {
             className="aspect-[5/4] w-full rounded-3xl object-cover"
           />
           <div>
-            <span className="eyebrow">Who we are</span>
+            <span className="eyebrow">Our Story</span>
             <h2 className="mt-4 text-4xl md:text-5xl">
               A small mill with a <span className="italic text-accent">big mission</span>
             </h2>
