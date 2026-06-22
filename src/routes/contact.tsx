@@ -134,7 +134,7 @@ function ContactPage() {
             <Field label="Phone">
               <input name="phone" className="input" placeholder="+250 ..." />
             </Field>
-            <Field label="Inquiry type">
+            <Field label="Type of inquiry">
               <select name="inquiry_type" className="input">
                 <option>General question</option>
                 <option>Place an order</option>
