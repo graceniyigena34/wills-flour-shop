@@ -41,7 +41,7 @@ export const T = {
       feat5Title: "Locally Produced", feat5Text: "Grown and milled in Africa, supporting local farmers and communities.",
       feat6Title: "Hygienically Processed", feat6Text: "Every batch passes through a clean, food-safe production line.",
       processEyebrow: "Our process",
-      processTitle: "From root to flour — in", processItalic: "six honest steps",
+      processTitle: "From root to flour in", processItalic: "six honest steps",
       seeProcess: "See the full process →",
       stepLabel: "Step",
       step1Title: "Harvesting", step1Text: "Mature cassava roots are hand-harvested from trusted farms.",
