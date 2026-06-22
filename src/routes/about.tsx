@@ -44,30 +44,36 @@ function AboutPage() {
         />
         <div className="space-y-8">
           <div>
-            <span className="grid h-11 w-11 place-items-center rounded-xl bg-leaf-soft text-leaf">
-              <Target className="h-5 w-5" />
-            </span>
-            <h2 className="mt-4 text-3xl">Our mission</h2>
+            <div className="flex items-center gap-3">
+              <span className="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-leaf-soft text-leaf">
+                <Target className="h-5 w-5" />
+              </span>
+              <h2 className="text-3xl">Our mission</h2>
+            </div>
             <p className="mt-3 text-muted-foreground">
               To provide healthy, natural, and high-quality cassava flour to families and businesses
               every single day.
             </p>
           </div>
           <div>
-            <span className="grid h-11 w-11 place-items-center rounded-xl bg-leaf-soft text-leaf">
-              <Eye className="h-5 w-5" />
-            </span>
-            <h2 className="mt-4 text-3xl">Our vision</h2>
+            <div className="flex items-center gap-3">
+              <span className="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-leaf-soft text-leaf">
+                <Eye className="h-5 w-5" />
+              </span>
+              <h2 className="text-3xl">Our vision</h2>
+            </div>
             <p className="mt-3 text-muted-foreground">
               To become the leading cassava flour brand in Africa and beyond, known for purity,
               fairness, and craftsmanship
             </p>
           </div>
           <div>
-            <span className="grid h-11 w-11 place-items-center rounded-xl bg-leaf-soft text-leaf">
-              <CheckCircle2 className="h-5 w-5" />
-            </span>
-            <h2 className="mt-4 text-3xl">Our objectives</h2>
+            <div className="flex items-center gap-3">
+              <span className="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-leaf-soft text-leaf">
+                <CheckCircle2 className="h-5 w-5" />
+              </span>
+              <h2 className="text-3xl">Our objectives</h2>
+            </div>
             <ul className="mt-3 space-y-2 text-muted-foreground">
               {[
                 "Promote healthy living through natural foods",
@@ -82,10 +88,12 @@ function AboutPage() {
             </ul>
           </div>
           <div>
-            <span className="grid h-11 w-11 place-items-center rounded-xl bg-leaf-soft text-leaf">
-              <CheckCircle2 className="h-5 w-5" />
-            </span>
-            <h2 className="mt-4 text-3xl">Our Impact</h2>
+            <div className="flex items-center gap-3">
+              <span className="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-leaf-soft text-leaf">
+                <CheckCircle2 className="h-5 w-5" />
+              </span>
+              <h2 className="text-3xl">Our Impact</h2>
+            </div>
             <ul className="mt-3 space-y-2 text-muted-foreground">
               {[
                 "Supporting women cassava farmers and cooperatives",
