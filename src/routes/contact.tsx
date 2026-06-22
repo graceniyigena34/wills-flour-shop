@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useState, useRef } from "react";
 import { Phone, Mail, MapPin, MessageCircle, Send } from "lucide-react";
 import emailjs from "@emailjs/browser";
+import { useLanguage } from "@/lib/i18n";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
@@ -27,6 +28,8 @@ function ContactPage() {
   const [sending, setSending] = useState(false);
   const [error, setError] = useState("");
   const formRef = useRef<HTMLFormElement>(null);
+  const { t } = useLanguage();
+  const c = t.contact;
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
@@ -42,55 +45,43 @@ function ContactPage() {
       setSent(true);
       setTimeout(() => window.location.reload(), 2000);
     } catch {
-      setError("Failed to send. Please try WhatsApp or email directly.");
+      setError(c.errorMsg);
     } finally {
       setSending(false);
     }
   }
 
+  const contacts = [
+    { icon: Phone, label: c.callLabel, value: "+250 793 017 746", href: "tel:+250793017746" },
+    { icon: MessageCircle, label: c.waLabel, value: c.waValue, href: "https://wa.me/+250793017746" },
+    { icon: Mail, label: c.emailLabel, value: "info@willscassavaflour.rw", href: "mailto:info@willscassavaflour.rw" },
+    { icon: MapPin, label: c.visitLabel, value: c.visitValue },
+  ];
+
   return (
     <div>
       <section className="container-x py-20 md:py-28">
-        <span className="eyebrow">Contact</span>
+        <span className="eyebrow">{c.eyebrow}</span>
         <h1 className="mt-4 max-w-3xl text-5xl md:text-7xl">
-          Let&rsquo;s <span className="italic text-accent">talk flour</span>
+          {c.h1a} <span className="italic text-accent">{c.h1italic}</span>
         </h1>
-        <p className="mt-6 max-w-2xl text-lg text-muted-foreground">
-          Questions, orders, partnerships 
-           we&rsquo;d love to hear from you.
-        </p>
+        <p className="mt-6 max-w-2xl text-lg text-muted-foreground">{c.intro}</p>
       </section>
 
       <section className="container-x grid gap-10 pb-24 md:grid-cols-2">
-        {/* CONTACT INFO */}
         <div className="space-y-5">
-          {[
-            { icon: Phone, label: "Call", value: "+250 793 017 746", href: "tel:+250793017746" },
-            {
-              icon: MessageCircle,
-              label: "WhatsApp",
-              value: "Message us anytime",
-              href: "https://wa.me/+250793017746",
-            },
-            {
-              icon: Mail,
-              label: "Email",
-              value: "info@willscassavaflour.rw",
-              href: "mailto:info@willscassavaflour.rw",
-            },
-            { icon: MapPin, label: "Visit", value: "Kigali, Rwanda" },
-          ].map((c) => (
+          {contacts.map((item) => (
             <a
-              key={c.label}
-              href={c.href ?? "#"}
+              key={item.label}
+              href={item.href ?? "#"}
               className="flex items-start gap-4 rounded-2xl border border-border bg-background p-5 transition-colors hover:border-accent/50"
             >
               <span className="grid h-11 w-11 place-items-center rounded-xl bg-leaf-soft text-leaf">
-                <c.icon className="h-5 w-5" />
+                <item.icon className="h-5 w-5" />
               </span>
               <div>
-                <p className="text-xs uppercase tracking-widest text-muted-foreground">{c.label}</p>
-                <p className="mt-1 font-serif text-lg text-primary">{c.value}</p>
+                <p className="text-xs uppercase tracking-widest text-muted-foreground">{item.label}</p>
+                <p className="mt-1 font-serif text-lg text-primary">{item.value}</p>
               </div>
             </a>
           ))}
@@ -107,48 +98,39 @@ function ContactPage() {
           </div>
         </div>
 
-        {/* CONTACT FORM */}
         <form
           ref={formRef}
           onSubmit={handleSubmit}
           className="rounded-3xl border border-border bg-background p-7 md:p-9"
         >
-          <h2 className="text-2xl">Send us a message</h2>
-          <p className="mt-1 text-sm text-muted-foreground">
-            For distributors and shops, mention your business in the message.
-          </p>
+          <h2 className="text-2xl">{c.formTitle}</h2>
+          <p className="mt-1 text-sm text-muted-foreground">{c.formSubtext}</p>
 
           <div className="mt-6 grid gap-4">
-            <Field label="Name">
-              <input name="from_name" required className="input" placeholder="Your full name" />
+            <Field label={c.nameLabel}>
+              <input name="from_name" required className="input" placeholder={c.namePlaceholder} />
             </Field>
-            <Field label="Email">
-              <input
-                name="from_email"
-                required
-                type="email"
-                className="input"
-                placeholder="you@example.com"
-              />
+            <Field label={c.emailFieldLabel}>
+              <input name="from_email" required type="email" className="input" placeholder={c.emailPlaceholder} />
             </Field>
-            <Field label="Phone">
-              <input name="phone" className="input" placeholder="+250 ..." />
+            <Field label={c.phoneLabel}>
+              <input name="phone" className="input" placeholder={c.phonePlaceholder} />
             </Field>
-            <Field label="Type of inquiry">
+            <Field label={c.inquiryLabel}>
               <select name="inquiry_type" className="input">
-                <option>General question</option>
-                <option>Place an order</option>
-                <option>Distributor / wholesale</option>
-                <option>Press / media</option>
+                <option>{c.inquiry1}</option>
+                <option>{c.inquiry2}</option>
+                <option>{c.inquiry3}</option>
+                <option>{c.inquiry4}</option>
               </select>
             </Field>
-            <Field label="Message">
+            <Field label={c.messageLabel}>
               <textarea
                 name="message"
                 required
                 rows={4}
                 className="input resize-none"
-                placeholder="Tell us a bit about what you need..."
+                placeholder={c.messagePlaceholder}
               />
             </Field>
           </div>
@@ -160,15 +142,7 @@ function ContactPage() {
             disabled={sending || sent}
             className="mt-6 inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-medium text-primary-foreground hover:bg-bark disabled:opacity-60"
           >
-            {sent ? (
-              "Message sent ✓"
-            ) : sending ? (
-              "Sending…"
-            ) : (
-              <>
-                Send message <Send className="h-4 w-4" />
-              </>
-            )}
+            {sent ? c.sentBtn : sending ? c.sendingBtn : <>{c.sendBtn} <Send className="h-4 w-4" /></>}
           </button>
 
           <style>{`.input{width:100%;border:1px solid var(--color-border);background:var(--color-background);border-radius:0.75rem;padding:0.65rem 0.9rem;font-size:0.875rem;color:var(--color-foreground);outline:none;transition:border-color .15s}.input:focus{border-color:var(--color-accent)}`}</style>

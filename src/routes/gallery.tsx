@@ -11,6 +11,7 @@ import pastries from "@/assets/pastries.jpeg";
 import family from "@/assets/family-kitchen.jpeg";
 import hero from "@/assets/hero-flour.jpeg";
 import willsLogo from "@/assets/Logo.jpeg";
+import { useLanguage } from "@/lib/i18n";
 
 export const Route = createFileRoute("/gallery")({
   head: () => ({
@@ -28,32 +29,33 @@ export const Route = createFileRoute("/gallery")({
   component: GalleryPage,
 });
 
-const images = [
-  { src: field, alt: "Cassava fields" },
-  { src: farmer, alt: "Harvesting" },
-  { src: peeling, alt: "Peeling" },
-  { src: bowl, alt: "Flour bowl" },
-  { src: drying, alt: "Drying" },
-  { src: grinding, alt: "Grinding" },
-  { src: packagingProcess, alt: "Packaging process" },
-  { src: people, alt: "Team members" },
-  { src: pastries, alt: "Baked pastries" },
-  { src: family, alt: "Family kitchen" },
-  { src: hero, alt: "Cassava flour" },
-  { src: willsLogo, alt: "Will's Cassava Flour brand logo" },
-];
-
 function GalleryPage() {
+  const { t } = useLanguage();
+  const g = t.gallery;
+
+  const images = [
+    { src: field, alt: g.img1 },
+    { src: farmer, alt: g.img2 },
+    { src: peeling, alt: g.img3 },
+    { src: bowl, alt: g.img4 },
+    { src: drying, alt: g.img5 },
+    { src: grinding, alt: g.img6 },
+    { src: packagingProcess, alt: g.img7 },
+    { src: people, alt: g.img8 },
+    { src: pastries, alt: g.img9 },
+    { src: family, alt: g.img10 },
+    { src: hero, alt: g.img11 },
+    { src: willsLogo, alt: g.img12 },
+  ];
+
   return (
     <div>
       <section className="container-x py-20 md:py-28">
-        <span className="eyebrow">Gallery</span>
+        <span className="eyebrow">{g.eyebrow}</span>
         <h1 className="mt-4 max-w-3xl text-5xl md:text-7xl">
-          A look <span className="italic text-accent">inside</span> our world
+          {g.h1a} <span className="italic text-accent">{g.h1italic}</span> {g.h1end}
         </h1>
-        <p className="mt-6 max-w-2xl text-lg text-muted-foreground">
-          Farms, faces, kitchens and craft the moments that shape every bag we make.
-        </p>
+        <p className="mt-6 max-w-2xl text-lg text-muted-foreground">{g.intro}</p>
       </section>
 
       <section className="container-x pb-24">
