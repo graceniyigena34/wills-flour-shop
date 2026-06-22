@@ -13,7 +13,7 @@ export function SiteFooter() {
             <span className="font-serif text-lg">Will&rsquo;s Cassava Flour</span>
           </div>
           <p className="mt-4 max-w-xs text-sm text-muted-foreground">
-            Pure, natural, chemical-free cassava flour milled with care in Rwanda for healthy
+            Pure, natural, chemical-free cassava flour milled with care in Africa for healthy
             families and businesses.
           </p>
           <div className="mt-5 flex gap-3">
