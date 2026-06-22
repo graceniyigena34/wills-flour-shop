@@ -86,6 +86,12 @@ export const T = {
       story2Title: "The Miller", story2Text: "I see each batch from peel to package. Cleanliness isn't a step — it's how I work every day.", story2Role: "Claudine, Production Lead",
       story3Title: "The Family", story3Text: "Will's flour made gluten-free cooking simple. Our children eat better, and so do we.", story3Role: "The Mukamana Family",
     },
+    process: {
+      eyebrow: "How it's made",
+      h1a: "Six honest steps from",
+      h1italic: "root to flour",
+      intro: "No shortcuts. No chemicals. Just time-tested craft, careful hygiene, and a deep respect for the cassava root.",
+    },
   },
   rw: {
     nav: {
@@ -170,6 +176,12 @@ export const T = {
       story2Title: "Umutsindyi", story2Text: "Mbona buri murwi kuva mukuraho uruhu kugeza mu gupakira. Isuku si intambwe — ni uburyo nkorera buri munsi.", story2Role: "Claudine, Umuyobozi w'Ikoranabuhanga",
       story3Title: "Umuryango", story3Text: "Ubugari bwa Will bwatworoheye guteka nta giliteni. Abana bacu barya neza, natwe twongereye.", story3Role: "Umuryango wa Mukamana",
     },
+    process: {
+      eyebrow: "Uburyo Bukorwa",
+      h1a: "Intambwe esheshatu z'ukuri kuva",
+      h1italic: "imizi kugeza ubugari",
+      intro: "Nta makosa. Nta miti. Ubuhanga bwageze igihe kirekire, isuku ikomeye, no gushima imizi y'imyumbati.",
+    },
   },
   sw: {
     nav: {
@@ -253,6 +265,12 @@ export const T = {
       story1Title: "Mkulima", story1Text: "Kwa mara ya kwanza, muhogo wetu unafika kwa familia zinaoupa thamani. Tunalima kwa fahari.", story1Role: "Jean-Bosco, Mkulima Mshirika",
       story2Title: "Msagaji", story2Text: "Ninaona kila kundi kutoka kuumba hadi kufungasha. Usafi si hatua — ndivyo ninavyofanya kazi kila siku.", story2Role: "Claudine, Kiongozi wa Uzalishaji",
       story3Title: "Familia", story3Text: "Unga wa Will ulifanya kupika bila gluteni kuwe rahisi. Watoto wetu wanakula vizuri, na sisi pia.", story3Role: "Familia ya Mukamana",
+    },
+    process: {
+      eyebrow: "Jinsi inavyotengenezwa",
+      h1a: "Hatua sita za kweli kutoka",
+      h1italic: "mzizi hadi unga",
+      intro: "Hakuna njia za mkato. Hakuna kemikali. Ujuzi wa kizamani, usafi wa hali ya juu, na heshima kubwa kwa mzizi wa muhogo.",
     },
   },
 };

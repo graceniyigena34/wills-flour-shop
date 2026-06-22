@@ -5,6 +5,7 @@ import bowl from "@/assets/flour-bowl.jpeg";
 import drying from "@/assets/drying.jpeg";
 import grinding from "@/assets/grinding.jpeg";
 import packaging from "@/assets/packaging process.jpeg";
+import { useLanguage } from "@/lib/i18n";
 
 export const Route = createFileRoute("/process")({
   head: () => ({
@@ -25,57 +26,28 @@ export const Route = createFileRoute("/process")({
   component: ProcessPage,
 });
 
-const steps = [
-  {
-    n: "01",
-    title: "Harvesting",
-    img: farmer,
-    text: "Mature cassava roots are hand pulled from rich African soil only when they’ve reached peak starch content. We work with smallholder farmers who share our commitment to quality",
-  },
-  {
-    n: "02",
-    title: "Peeling",
-    img: peeling,
-    text: "Within hours of harvest, each root is carefully peeled by hand. Removing the outer skin preserves the pure white flesh that makes our flour so silky.",
-  },
-  {
-    n: "03",
-    title: "Soaking",
-    img: bowl,
-    text: "Peeled cassava is submerged in clean spring water to gently draw out natural compounds. The traditional way to ensure a safe, mild flour.",
-  },
-  {
-    n: "04",
-    title: "Drying",
-    img: drying,
-    text: "Soaked cassava is spread on raised mesh racks and sun-dried until perfectly crisp. Slow drying locks in flavour and nutrients.",
-  },
-  {
-    n: "05",
-    title: "Grinding",
-    img: grinding,
-    text: "Dried cassava is milled in small batches, ensuring it stays fresh and consistent.",
-  },
-  {
-    n: "06",
-    title: "Packaging",
-    img: packaging,
-    text: "Flour is sealed in food safe kraft bags inside a clean, hygienic facility. Each bag is sealed, labelled, and ready for your kitchen.",
-  },
-];
-
 function ProcessPage() {
+  const { t } = useLanguage();
+  const p = t.process;
+  const h = t.home;
+
+  const steps = [
+    { n: "01", title: h.step1Title, img: farmer, text: h.step1Text },
+    { n: "02", title: h.step2Title, img: peeling, text: h.step2Text },
+    { n: "03", title: h.step3Title, img: bowl, text: h.step3Text },
+    { n: "04", title: h.step4Title, img: drying, text: h.step4Text },
+    { n: "05", title: h.step5Title, img: grinding, text: h.step5Text },
+    { n: "06", title: h.step6Title, img: packaging, text: h.step6Text },
+  ];
+
   return (
     <div>
       <section className="container-x py-20 md:py-28">
-        <span className="eyebrow">How it&rsquo;s made</span>
+        <span className="eyebrow">{p.eyebrow}</span>
         <h1 className="mt-4 max-w-3xl text-5xl md:text-7xl">
-          Six honest steps from <span className="italic text-accent">root to flour</span>
+          {p.h1a} <span className="italic text-accent">{p.h1italic}</span>
         </h1>
-        <p className="mt-6 max-w-2xl text-lg text-muted-foreground">
-          No shortcuts. No chemicals. Just time-tested craft, careful hygiene, and a deep respect
-          for the cassava root.
-        </p>
+        <p className="mt-6 max-w-2xl text-lg text-muted-foreground">{p.intro}</p>
       </section>
 
       <section className="container-x pb-24">
@@ -94,10 +66,7 @@ function ProcessPage() {
               <div>
                 <p className="font-serif text-7xl text-cassava-deep md:text-8xl">{s.n}</p>
                 <h2 className="mt-2 text-4xl md:text-5xl">{s.title}</h2>
-                <p
-                  className="mt-4 max-w-md text-muted-foreground"
-                  dangerouslySetInnerHTML={{ __html: s.text }}
-                />
+                <p className="mt-4 max-w-md text-muted-foreground">{s.text}</p>
               </div>
             </div>
           ))}
