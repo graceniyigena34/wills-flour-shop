@@ -52,15 +52,10 @@ function LangDropdown() {
             <button
               key={l.code}
               onClick={() => { setLang(l.code); setOpen(false); }}
-              className={`flex w-full items-center gap-3 px-4 py-3 text-sm transition-colors hover:bg-leaf-soft ${
+              className={`flex w-full items-center px-4 py-3 text-sm transition-colors hover:bg-leaf-soft ${
                 lang === l.code ? "font-semibold text-primary" : "text-foreground/70"
               }`}
             >
-              <span className={`flex h-6 w-6 items-center justify-center rounded-full text-xs font-bold ${
-                lang === l.code ? "bg-primary text-primary-foreground" : "bg-secondary text-foreground/60"
-              }`}>
-                {l.label}
-              </span>
               {l.full}
             </button>
           ))}
