@@ -148,7 +148,7 @@ function HomePage() {
               {h.viewAll}
             </Link>
           </div>
-          <div className="mt-10 grid gap-6 md:grid-cols-3">
+          <div className="mt-10 grid gap-6 sm:grid-cols-2 md:grid-cols-3">
             {[
               { img: bowl,     title: h.prod1Title, text: h.prod1Text },
               { img: hero,     title: h.prod2Title, text: h.prod2Text },
@@ -182,7 +182,7 @@ function HomePage() {
             {h.whyTitle} <span className="italic text-accent">{h.whyItalic}</span> {h.whyEnd}
           </h2>
         </div>
-        <div className="mt-12 grid gap-6 md:grid-cols-3">
+        <div className="mt-12 grid gap-6 sm:grid-cols-2 md:grid-cols-3">
           {features.map((f) => (
             <div
               key={f.title}
@@ -212,7 +212,7 @@ function HomePage() {
               {h.seeProcess}
             </Link>
           </div>
-          <div className="mt-10 grid gap-5 md:grid-cols-3">
+          <div className="mt-10 grid gap-5 sm:grid-cols-2 md:grid-cols-3">
             {steps.slice(0, 6).map((s) => (
               <div
                 key={s.n}
@@ -243,7 +243,7 @@ function HomePage() {
           <span className="eyebrow">{h.voicesEyebrow}</span>
           <h2 className="mt-3 text-4xl md:text-5xl">{h.voicesTitle}</h2>
         </div>
-        <div className="mt-12 grid gap-6 md:grid-cols-3">
+        <div className="mt-12 grid gap-6 sm:grid-cols-2 md:grid-cols-3">
           {[
             { q: h.test1Q, a: h.test1A },
             { q: h.test2Q, a: h.test2A },
@@ -260,7 +260,7 @@ function HomePage() {
 
       {/* GALLERY PREVIEW */}
       <section className="container-x pb-20 md:pb-28">
-        <div className="grid gap-3 md:grid-cols-4">
+        <div className="grid grid-cols-2 gap-3 md:grid-cols-4">
           {[field, farmer, packaging, pastries].map((src, i) => (
             <img
               key={i}
