@@ -288,7 +288,7 @@ function HomePage() {
               {h.orderBtn} <ArrowRight className="h-4 w-4" />
             </Link>
             <a
-              href={`https://wa.me/+250785704109?text=${encodeURIComponent(
+              href={`https://wa.me/+250793017746?text=${encodeURIComponent(
                 "Hello Will's Cassava Flour! 👋 I'd like to place an order for cassava flour. Could you share the available pack sizes and prices?",
               )}`}
               target="_blank"
