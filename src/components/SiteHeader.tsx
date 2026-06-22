@@ -1,13 +1,13 @@
 import { Link } from "@tanstack/react-router";
-import { useState } from "react";
-import { Menu, X } from "lucide-react";
+import { useState, useRef, useEffect } from "react";
+import { Menu, X, Globe } from "lucide-react";
 import logo from "@/assets/Logo.jpeg";
 import { useLanguage, Lang } from "@/lib/i18n";
 
-const languages: { code: Lang; label: string }[] = [
-  { code: "en", label: "EN" },
-  { code: "rw", label: "RW" },
-  { code: "sw", label: "SW" },
+const languages: { code: Lang; label: string; full: string }[] = [
+  { code: "en", label: "EN", full: "English" },
+  { code: "rw", label: "RW", full: "Kinyarwanda" },
+  { code: "sw", label: "SW", full: "Swahili" },
 ];
 
 const navKeys = [
@@ -19,6 +19,56 @@ const navKeys = [
   { to: "/faq", key: "faq" },
   { to: "/contact", key: "contact" },
 ] as const;
+
+function LangDropdown() {
+  const { lang, setLang } = useLanguage();
+  const [open, setOpen] = useState(false);
+  const ref = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    function handleClick(e: MouseEvent) {
+      if (ref.current && !ref.current.contains(e.target as Node)) setOpen(false);
+    }
+    document.addEventListener("mousedown", handleClick);
+    return () => document.removeEventListener("mousedown", handleClick);
+  }, []);
+
+  const current = languages.find((l) => l.code === lang)!;
+
+  return (
+    <div ref={ref} className="relative">
+      <button
+        onClick={() => setOpen((v) => !v)}
+        aria-label="Switch language"
+        className="flex h-10 w-10 items-center justify-center rounded-full border-2 border-primary bg-background shadow-sm transition-colors hover:bg-leaf-soft"
+      >
+        <Globe className="h-4 w-4 text-primary" />
+        <span className="sr-only">{current.full}</span>
+      </button>
+
+      {open && (
+        <div className="absolute right-0 top-12 z-50 min-w-[140px] overflow-hidden rounded-2xl border border-border bg-background shadow-lg">
+          {languages.map((l) => (
+            <button
+              key={l.code}
+              onClick={() => { setLang(l.code); setOpen(false); }}
+              className={`flex w-full items-center gap-3 px-4 py-3 text-sm transition-colors hover:bg-leaf-soft ${
+                lang === l.code ? "font-semibold text-primary" : "text-foreground/70"
+              }`}
+            >
+              <span className={`flex h-6 w-6 items-center justify-center rounded-full text-xs font-bold ${
+                lang === l.code ? "bg-primary text-primary-foreground" : "bg-secondary text-foreground/60"
+              }`}>
+                {l.label}
+              </span>
+              {l.full}
+            </button>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
 
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
@@ -48,21 +98,7 @@ export function SiteHeader() {
           ))}
         </nav>
         <div className="hidden items-center gap-3 md:flex">
-          <div className="flex items-center gap-1 rounded-full border border-border px-2 py-1">
-            {languages.map((l) => (
-              <button
-                key={l.code}
-                onClick={() => setLang(l.code)}
-                className={`rounded-full px-2 py-0.5 text-xs font-medium transition-colors ${
-                  lang === l.code
-                    ? "bg-primary text-primary-foreground"
-                    : "text-foreground/60 hover:text-primary"
-                }`}
-              >
-                {l.label}
-              </button>
-            ))}
-          </div>
+          <LangDropdown />
           <Link
             to="/products"
             className="rounded-full bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-bark"
@@ -104,7 +140,7 @@ export function SiteHeader() {
                       : "border border-border text-foreground/60 hover:text-primary"
                   }`}
                 >
-                  {l.label}
+                  {l.full}
                 </button>
               ))}
             </div>
