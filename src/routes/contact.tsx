@@ -37,7 +37,7 @@ function ContactPage() {
         "service_5o5bdzj",
         "template_dks3y3g",
         formRef.current!,
-        "qpaIKNgGD7Trbbeo0",
+        "Aec6UGmpA2c_91I_R",
       );
       setSent(true);
       setTimeout(() => window.location.reload(), 2000);
