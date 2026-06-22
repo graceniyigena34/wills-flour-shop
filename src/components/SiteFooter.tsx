@@ -89,7 +89,7 @@ export function SiteFooter() {
       </div>
       <div className="border-t border-border/60">
         <div className="container-x flex flex-col items-center justify-between gap-2 py-5 text-xs text-muted-foreground md:flex-row">
-          <p>© 2026 Will&rsquo;s Cassava Flour. All rights reserved.</p>
+          <p>© 2026 Will&rsquo;s Cassava Flour. All rights reserved. Designed by RG Consult Inc.</p>
           <p>Healthy flour for healthy families.</p>
         </div>
       </div>
