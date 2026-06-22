@@ -40,9 +40,9 @@ function LangDropdown() {
       <button
         onClick={() => setOpen((v) => !v)}
         aria-label="Switch language"
-        className="flex h-10 w-10 items-center justify-center rounded-full border-2 border-primary bg-background shadow-sm transition-colors hover:bg-leaf-soft"
+        className="flex items-center justify-center rounded-full p-2 transition-colors hover:bg-leaf-soft"
       >
-        <Globe className="h-4 w-4 text-primary" />
+        <Globe className="h-5 w-5 text-primary" />
         <span className="sr-only">{current.full}</span>
       </button>
 
