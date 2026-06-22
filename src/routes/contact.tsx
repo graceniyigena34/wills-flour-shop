@@ -34,12 +34,13 @@ function ContactPage() {
     setError("");
     try {
       await emailjs.sendForm(
-        "service_q28g22j",
-        "template_zys1zyh",
+        "service_5o5bdzj",
+        "template_dks3y3g",
         formRef.current!,
-        "d6KnoByefpz96fBzl",
+        "qpaIKNgGD7Trbbeo0",
       );
       setSent(true);
+      setTimeout(() => window.location.reload(), 2000);
     } catch {
       setError("Failed to send. Please try WhatsApp or email directly.");
     } finally {
