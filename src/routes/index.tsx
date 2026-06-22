@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { useLanguage } from "@/lib/i18n";
 import {
   Leaf,
   Sparkles,
@@ -109,6 +110,8 @@ const steps = [
 ];
 
 function HomePage() {
+  const { t } = useLanguage();
+  const h = t.home;
   return (
     <div>
       {/* HERO */}
@@ -116,29 +119,26 @@ function HomePage() {
         <div className="container-x grid items-center gap-12 py-16 md:grid-cols-2 md:py-24">
           <div>
             <span className="eyebrow">
-              <span className="h-px w-8 bg-accent" /> Rwanda • Est.2025{" "}
+              <span className="h-px w-8 bg-accent" /> {h.eyebrow}{" "}
             </span>
             <h1 className="mt-5 text-balance text-5xl leading-[1.05] md:text-7xl">
-              Pure Natural
+              {h.h1a}
               <br />
-              <span className="italic text-accent">Healthy</span> cassava flour
+              <span className="italic text-accent">{h.h1b}</span> {h.h1c}
             </h1>
-            <p className="mt-6 max-w-md text-lg text-muted-foreground">
-              100% Chemical Free Cassava Flour. Bringing the Natural Goodness of African Cassava to
-              Every Kitchen.
-            </p>
+            <p className="mt-6 max-w-md text-lg text-muted-foreground">{h.sub}</p>
             <div className="mt-10 grid max-w-md grid-cols-3 gap-6 border-t border-border pt-6 text-sm">
               <div>
                 <p className="font-serif text-2xl text-primary">100%</p>
-                <p className="text-muted-foreground">Chemical free</p>
+                <p className="text-muted-foreground">{h.stat1}</p>
               </div>
               <div>
                 <p className="font-serif text-2xl text-primary">6-step</p>
-                <p className="text-muted-foreground">Pure process</p>
+                <p className="text-muted-foreground">{h.stat2}</p>
               </div>
               <div>
                 <p className="font-serif text-2xl text-primary">3 sizes</p>
-                <p className="text-muted-foreground">For every need</p>
+                <p className="text-muted-foreground">{h.stat3}</p>
               </div>
             </div>
           </div>
@@ -152,7 +152,7 @@ function HomePage() {
               className="aspect-[4/5] w-full rounded-3xl object-cover shadow-2xl shadow-primary/10"
             />
             <div className="absolute -bottom-6 -left-6 hidden rounded-2xl border border-border bg-background p-4 shadow-xl md:block">
-              <p className="text-xs uppercase tracking-widest text-muted-foreground">Loved by</p>
+              <p className="text-xs uppercase tracking-widest text-muted-foreground">{h.lovedBy}</p>
               <p className="font-serif text-2xl text-primary">2,400+ families</p>
             </div>
           </div>
@@ -171,9 +171,9 @@ function HomePage() {
             className="aspect-[5/4] w-full rounded-3xl object-cover"
           />
           <div>
-            <span className="eyebrow">Our Story</span>
+            <span className="eyebrow">{h.ourStory}</span>
             <h2 className="mt-4 text-4xl md:text-5xl">
-              A small mill with a <span className="italic text-accent">big mission</span>
+              {h.missionTitle} <span className="italic text-accent">{h.missionItalic}</span>
             </h2>
             <p className="mt-5 text-muted-foreground">
               Will&rsquo;s Cassava Flour was born from a simple idea: families deserve flour they
@@ -195,7 +195,7 @@ function HomePage() {
               to="/about"
               className="mt-6 inline-flex items-center gap-2 text-sm font-medium text-accent hover:gap-3 transition-all"
             >
-              Read our story <ArrowRight className="h-4 w-4" />
+              {h.readStory} <ArrowRight className="h-4 w-4" />
             </Link>
           </div>
         </div>
@@ -206,11 +206,11 @@ function HomePage() {
         <div className="container-x">
           <div className="flex flex-wrap items-end justify-between gap-4">
             <div>
-              <span className="eyebrow">Featured</span>
-              <h2 className="mt-3 text-4xl md:text-5xl">Crafted for every kitchen</h2>
+              <span className="eyebrow">{h.featured}</span>
+              <h2 className="mt-3 text-4xl md:text-5xl">{h.craftedTitle}</h2>
             </div>
             <Link to="/products" className="text-sm font-medium text-accent hover:underline">
-              View all products →
+              {h.viewAll}
             </Link>
           </div>
           <div className="mt-10 grid gap-6 md:grid-cols-3">
@@ -254,9 +254,9 @@ function HomePage() {
       {/* WHY US */}
       <section className="container-x py-20 md:py-28">
         <div className="mx-auto max-w-2xl text-center">
-          <span className="eyebrow">Why choose us</span>
+          <span className="eyebrow">{h.whyEyebrow}</span>
           <h2 className="mt-3 text-4xl md:text-5xl">
-            Six reasons families <span className="italic text-accent">trust</span> us
+            {h.whyTitle} <span className="italic text-accent">{h.whyItalic}</span> {h.whyEnd}
           </h2>
         </div>
         <div className="mt-12 grid gap-6 md:grid-cols-3">
@@ -280,14 +280,13 @@ function HomePage() {
         <div className="container-x">
           <div className="flex flex-wrap items-end justify-between gap-4">
             <div className="max-w-xl">
-              <span className="eyebrow">Our process</span>
+              <span className="eyebrow">{h.processEyebrow}</span>
               <h2 className="mt-3 text-4xl md:text-5xl">
-                From root to flour in <span className="italic text-accent">six honest steps</span>
-                
+                {h.processTitle} <span className="italic text-accent">{h.processItalic}</span>
               </h2>
             </div>
             <Link to="/process" className="text-sm font-medium text-accent hover:underline">
-              See the full process →
+              {h.seeProcess}
             </Link>
           </div>
           <div className="mt-10 grid gap-5 md:grid-cols-3">
@@ -318,8 +317,8 @@ function HomePage() {
       {/* TESTIMONIALS */}
       <section className="container-x py-20 md:py-28">
         <div className="mx-auto max-w-2xl text-center">
-          <span className="eyebrow">Voices we love</span>
-          <h2 className="mt-3 text-4xl md:text-5xl">What our customers say</h2>
+          <span className="eyebrow">{h.voicesEyebrow}</span>
+          <h2 className="mt-3 text-4xl md:text-5xl">{h.voicesTitle}</h2>
         </div>
         <div className="mt-12 grid gap-6 md:grid-cols-3">
           {[
@@ -366,16 +365,16 @@ function HomePage() {
       {/* CTA */}
       <section className="container-x pb-24">
         <div className="overflow-hidden rounded-[2.5rem] bg-primary px-8 py-16 text-center text-primary-foreground md:px-16 md:py-24">
-          <p className="text-sm uppercase tracking-[0.25em] text-cassava">Order today</p>
+          <p className="text-sm uppercase tracking-[0.25em] text-cassava">{h.orderEyebrow}</p>
           <h2 className="mx-auto mt-4 max-w-2xl text-balance text-4xl text-primary-foreground md:text-6xl">
-            Healthy flour for <span className="italic text-cassava">healthy families</span>
+            {h.ctaTitle} <span className="italic text-cassava">{h.ctaItalic}</span>
           </h2>
           <div className="mt-8 flex flex-wrap justify-center gap-3">
             <Link
               to="/products"
               className="inline-flex items-center gap-2 rounded-full bg-cassava px-6 py-3 text-sm font-medium text-primary hover:bg-cassava-deep"
             >
-              Order Today <ArrowRight className="h-4 w-4" />
+              {h.orderBtn} <ArrowRight className="h-4 w-4" />
             </Link>
             <a
               href={`https://wa.me/+250785704109?text=${encodeURIComponent(

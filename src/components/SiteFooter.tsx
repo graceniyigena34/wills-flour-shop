@@ -1,7 +1,16 @@
 import { Link } from "@tanstack/react-router";
 import { Instagram, Phone, Mail, MapPin, Wheat } from "lucide-react";
+import { useLanguage, Lang } from "@/lib/i18n";
+
+const languages: { code: Lang; label: string }[] = [
+  { code: "en", label: "English" },
+  { code: "rw", label: "Kinyarwanda" },
+  { code: "sw", label: "Swahili" },
+];
 
 export function SiteFooter() {
+  const { t, lang, setLang } = useLanguage();
+
   return (
     <footer className="mt-24 border-t border-border bg-secondary/40">
       <div className="container-x grid gap-10 py-14 md:grid-cols-4">
@@ -13,8 +22,7 @@ export function SiteFooter() {
             <span className="font-serif text-lg">Will&rsquo;s Cassava Flour</span>
           </div>
           <p className="mt-4 max-w-xs text-sm text-muted-foreground">
-            Pure, natural, chemical-free cassava flour milled with care in Africa for healthy
-            families and businesses.
+            {t.footer.description}
           </p>
           <div className="mt-5 flex gap-3">
             <a
@@ -30,38 +38,18 @@ export function SiteFooter() {
         </div>
 
         <div>
-          <h4 className="text-sm font-semibold uppercase tracking-wider text-primary">Explore</h4>
+          <h4 className="text-sm font-semibold uppercase tracking-wider text-primary">{t.footer.explore}</h4>
           <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
-            <li>
-              <Link to="/about" className="hover:text-primary">
-                About Us
-              </Link>
-            </li>
-            <li>
-              <Link to="/process" className="hover:text-primary">
-                Our Process
-              </Link>
-            </li>
-            <li>
-              <Link to="/products" className="hover:text-primary">
-                Products
-              </Link>
-            </li>
-            <li>
-              <Link to="/gallery" className="hover:text-primary">
-                Gallery
-              </Link>
-            </li>
-            <li>
-              <Link to="/faq" className="hover:text-primary">
-                FAQ
-              </Link>
-            </li>
+            <li><Link to="/about" className="hover:text-primary">{t.footer.aboutUs}</Link></li>
+            <li><Link to="/process" className="hover:text-primary">{t.footer.ourProcess}</Link></li>
+            <li><Link to="/products" className="hover:text-primary">{t.footer.products}</Link></li>
+            <li><Link to="/gallery" className="hover:text-primary">{t.footer.gallery}</Link></li>
+            <li><Link to="/faq" className="hover:text-primary">{t.footer.faq}</Link></li>
           </ul>
         </div>
 
         <div>
-          <h4 className="text-sm font-semibold uppercase tracking-wider text-primary">Contact</h4>
+          <h4 className="text-sm font-semibold uppercase tracking-wider text-primary">{t.footer.contact}</h4>
           <ul className="mt-4 space-y-3 text-sm text-muted-foreground">
             <li className="flex items-start gap-2">
               <MapPin className="mt-0.5 h-4 w-4 text-leaf" />
@@ -79,18 +67,29 @@ export function SiteFooter() {
         </div>
 
         <div>
-          <h4 className="text-sm font-semibold uppercase tracking-wider text-primary">Languages</h4>
-          <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
-            <li>English</li>
-            <li>Kinyarwanda</li>
-            <li>Swahili</li>
+          <h4 className="text-sm font-semibold uppercase tracking-wider text-primary">{t.footer.languages}</h4>
+          <ul className="mt-4 space-y-2 text-sm">
+            {languages.map((l) => (
+              <li key={l.code}>
+                <button
+                  onClick={() => setLang(l.code)}
+                  className={`transition-colors hover:text-primary ${
+                    lang === l.code
+                      ? "font-semibold text-primary"
+                      : "text-muted-foreground"
+                  }`}
+                >
+                  {l.label}
+                </button>
+              </li>
+            ))}
           </ul>
         </div>
       </div>
       <div className="border-t border-border/60">
         <div className="container-x flex flex-col items-center justify-between gap-2 py-5 text-xs text-muted-foreground md:flex-row">
-          <p>© 2026 Will&rsquo;s Cassava Flour. All rights reserved. Designed by RG Consult Inc.</p>
-          <p>Healthy flour for healthy families.</p>
+          <p>{t.footer.rights}</p>
+          <p>{t.footer.tagline}</p>
         </div>
       </div>
     </footer>
